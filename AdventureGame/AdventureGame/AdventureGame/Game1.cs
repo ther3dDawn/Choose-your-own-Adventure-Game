@@ -14,11 +14,18 @@ namespace AdventureGame
     /// <summary>
     /// This is the main type for your game
     /// </summary>
+    enum Screen
+    {
+        Start, Help, Gameover
+    }
     public class Game1 : Microsoft.Xna.Framework.Game
     {
         GraphicsDeviceManager graphics;
         SpriteBatch spriteBatch;
-
+        Screen screentype = Screen.Start;
+        MouseState oldMouse = Mouse.GetState();
+        Color[] color = new Color[3] { Color.Red, Color.White, Color.Black };
+        
         public Game1()
         {
             graphics = new GraphicsDeviceManager(this);
@@ -34,7 +41,7 @@ namespace AdventureGame
         protected override void Initialize()
         {
             // TODO: Add your initialization logic here
-
+            this.IsMouseVisible = true;
             base.Initialize();
         }
 
@@ -66,12 +73,32 @@ namespace AdventureGame
         /// <param name="gameTime">Provides a snapshot of timing values.</param>
         protected override void Update(GameTime gameTime)
         {
+            MouseState mouse = Mouse.GetState();
+            KeyboardState Key = Keyboard.GetState();
             // Allows the game to exit
             if (GamePad.GetState(PlayerIndex.One).Buttons.Back == ButtonState.Pressed)
                 this.Exit();
 
             // TODO: Add your update logic here
+            
+            if (mouse.LeftButton == ButtonState.Pressed
+                && oldMouse.LeftButton == ButtonState.Released 
+                && screentype == Screen.Start)
+            {
+                screentype = Screen.Gameover;
+            }
+            
+            if (Key.IsKeyDown(Keys.H) && screentype == Screen.Start)
+            {
+                screentype = Screen.Help;
+            }
 
+            if (Key.IsKeyDown(Keys.R))
+            {
+                screentype = Screen.Start;
+            }
+
+            oldMouse = mouse;
             base.Update(gameTime);
         }
 
@@ -81,10 +108,22 @@ namespace AdventureGame
         /// <param name="gameTime">Provides a snapshot of timing values.</param>
         protected override void Draw(GameTime gameTime)
         {
-            GraphicsDevice.Clear(Color.Red);
 
             // TODO: Add your drawing code here
-
+                        spriteBatch.Begin();
+            if (screentype == Screen.Start)
+            {
+                GraphicsDevice.Clear(color[1]);
+            }
+            else if (screentype == Screen.Help)
+            {
+                GraphicsDevice.Clear(color[2]);
+            }
+            else if (screentype == Screen.Gameover)
+            {
+                GraphicsDevice.Clear(color[0]);
+            }
+            spriteBatch.End();
             base.Draw(gameTime);
         }
     }
