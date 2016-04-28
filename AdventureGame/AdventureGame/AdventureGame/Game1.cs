@@ -16,7 +16,7 @@ namespace AdventureGame
     /// </summary>
     enum Screen
     {
-        Start, Help, Gameover
+        Start, Game, Help, Gameover
     }
     public class Game1 : Microsoft.Xna.Framework.Game
     {
