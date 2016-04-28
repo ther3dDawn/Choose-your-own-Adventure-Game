@@ -9,7 +9,7 @@ using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
 using Microsoft.Xna.Framework.Media;
 
-namespace AdventureGame
+namespace Adventure_Project
 {
     /// <summary>
     /// This is the main type for your game
@@ -24,8 +24,8 @@ namespace AdventureGame
         SpriteBatch spriteBatch;
         Screen screentype = Screen.Start;
         MouseState oldMouse = Mouse.GetState();
-        Color[] color = new Color[3] { Color.Red, Color.White, Color.Black };
-        
+        Color[] color = new Color[4] { Color.Red, Color.White, Color.Black, Color.Green};
+
         public Game1()
         {
             graphics = new GraphicsDeviceManager(this);
@@ -80,20 +80,30 @@ namespace AdventureGame
                 this.Exit();
 
             // TODO: Add your update logic here
-            
+
             if (mouse.LeftButton == ButtonState.Pressed
-                && oldMouse.LeftButton == ButtonState.Released 
+                && oldMouse.LeftButton == ButtonState.Released
                 && screentype == Screen.Start)
             {
                 screentype = Screen.Gameover;
             }
-            
-            if (Key.IsKeyDown(Keys.H) && screentype == Screen.Start)
+
+            if (Key.IsKeyDown(Keys.H) && screentype == Screen.Game)
             {
                 screentype = Screen.Help;
             }
 
-            if (Key.IsKeyDown(Keys.R))
+            if (Key.IsKeyDown(Keys.T) || Key.IsKeyDown(Keys.T) && screentype == Screen.Help)
+            {
+                screentype = Screen.Game;
+            }
+
+            if (Key.IsKeyDown(Keys.G) && screentype == Screen.Game)
+            {
+                screentype = Screen.Gameover;
+            }
+
+            if (Key.IsKeyDown(Keys.S) && screentype == Screen.Gameover)
             {
                 screentype = Screen.Start;
             }
@@ -110,7 +120,7 @@ namespace AdventureGame
         {
 
             // TODO: Add your drawing code here
-                        spriteBatch.Begin();
+            spriteBatch.Begin();
             if (screentype == Screen.Start)
             {
                 GraphicsDevice.Clear(color[1]);
@@ -123,6 +133,11 @@ namespace AdventureGame
             {
                 GraphicsDevice.Clear(color[0]);
             }
+            else if (screentype == Screen.Game)
+            {
+                GraphicsDevice.Clear(color[3]);
+            }
+
             spriteBatch.End();
             base.Draw(gameTime);
         }
