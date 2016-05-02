@@ -26,6 +26,8 @@ namespace Adventure_Project
         MouseState oldMouse = Mouse.GetState();
         Color[] color = new Color[4] { Color.Red, Color.White, Color.Black, Color.Green};
 
+        SpriteFont EndingScreenFont;
+
         public Game1()
         {
             graphics = new GraphicsDeviceManager(this);
@@ -53,6 +55,7 @@ namespace Adventure_Project
         {
             // Create a new SpriteBatch, which can be used to draw textures.
             spriteBatch = new SpriteBatch(GraphicsDevice);
+            EndingScreenFont = Content.Load<SpriteFont>("SpriteFont1");
 
             // TODO: use this.Content to load your game content here
         }
@@ -132,6 +135,12 @@ namespace Adventure_Project
             else if (screentype == Screen.Gameover)
             {
                 GraphicsDevice.Clear(color[0]);
+                spriteBatch.DrawString(EndingScreenFont, "Congratulations you escaped!", new Vector2(250, 200), Color.White);
+                spriteBatch.DrawString(EndingScreenFont, "Created by:", new Vector2(350, 220), Color.White);
+                spriteBatch.DrawString(EndingScreenFont, "Alyana Alvarez", new Vector2(325, 240), Color.White);
+                spriteBatch.DrawString(EndingScreenFont, "Duncan Hadley", new Vector2(330, 260), Color.White);
+                spriteBatch.DrawString(EndingScreenFont, "Nathan Johnson", new Vector2(327, 280), Color.White);
+                spriteBatch.DrawString(EndingScreenFont, "Ezinne Megwa", new Vector2(340, 300), Color.White);
             }
             else if (screentype == Screen.Game)
             {
