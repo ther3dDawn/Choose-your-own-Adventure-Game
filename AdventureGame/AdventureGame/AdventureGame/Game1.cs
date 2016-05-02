@@ -137,7 +137,7 @@ namespace Adventure_Project
                 GraphicsDevice.Clear(color[0]);
                 spriteBatch.DrawString(EndingScreenFont, "Congratulations you escaped!", new Vector2(250, 200), Color.White);
                 spriteBatch.DrawString(EndingScreenFont, "Created by:", new Vector2(350, 220), Color.White);
-                spriteBatch.DrawString(EndingScreenFont, "Alyana Alvarez", new Vector2(325, 240), Color.White);
+                spriteBatch.DrawString(EndingScreenFont, "Dani Alvarez", new Vector2(335, 240), Color.White);
                 spriteBatch.DrawString(EndingScreenFont, "Duncan Hadley", new Vector2(330, 260), Color.White);
                 spriteBatch.DrawString(EndingScreenFont, "Nathan Johnson", new Vector2(327, 280), Color.White);
                 spriteBatch.DrawString(EndingScreenFont, "Ezinne Megwa", new Vector2(340, 300), Color.White);
