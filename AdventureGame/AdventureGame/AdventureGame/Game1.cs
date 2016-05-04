@@ -26,11 +26,34 @@ namespace Adventure_Project
         Screen oldscreentype;
         MouseState oldMouse = Mouse.GetState();
         Color[] color = new Color[5] { Color.Red, Color.White, Color.Black, Color.Green, Color.Purple };
-        string[] endingCredits = new string[6] { "Congratulations you escaped!", "Created by:", "Alyana Alvarez",
+        string[] endingCredits = new string[6] { "Congratulations you escaped!", "Created by:", "Dani Alvarez",
             "Duncan Hadley", "Nathan Johnson", "Ezinne Megwa" };
 
         SpriteFont EndingScreenFont;
         SpriteFont EndingScreenCredits;
+        
+        /*
+        *These are the avatars
+        */
+        
+        Rectangle boyBeforeRect;
+        Texture2D BoyBeforeText;
+        Rectangle boyAfterRect;
+        Texture2D boyAfterText;
+
+        Rectangle girlBeforeRect;
+        Texture2D girlBeforeText;
+        Rectangle girlAfterRect;
+        Texture2D girlAfterText;
+        
+        Rectangle nurseGroupRect;
+        Texture2D nurseGroupText;
+        
+        Rectangle nurseRect;
+        Texture2D nurseText;
+        
+        Rectangle nurseMedWardRect;
+        Texture2D nurseMedWardText;
 
         public Game1()
         {
@@ -61,6 +84,15 @@ namespace Adventure_Project
             spriteBatch = new SpriteBatch(GraphicsDevice);
             EndingScreenFont = Content.Load<SpriteFont>("SpriteFont1");
             EndingScreenCredits = Content.Load<SpriteFont>("SpriteFont2");
+            
+            /*
+            *These are the textures for the avatars
+            */
+            
+            BoyBeforeText = Content.Load<Texture2D>("BoyPatient");
+            boyAfterText = Content.Load<Texture2D>("BoyAfterPatient");
+            girlBeforeText = Content.Load<Texture2D>("GirlPatient");
+            girlAfterText = Content.Load<Texture2D>("GirlAfterPatient");
 
             // TODO: use this.Content to load your game content here
         }
