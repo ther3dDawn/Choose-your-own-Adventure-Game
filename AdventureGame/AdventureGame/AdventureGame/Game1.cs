@@ -93,6 +93,8 @@ namespace Adventure_Project
             boyAfterText = Content.Load<Texture2D>("BoyAfterPatient");
             girlBeforeText = Content.Load<Texture2D>("GirlPatient");
             girlAfterText = Content.Load<Texture2D>("GirlAfterPatient");
+            nurseGroupText = Content.Load<Texture2D>("group of nurses");
+            nurseText = Content.Load<Texture2D>("nurse1");
 
             // TODO: use this.Content to load your game content here
         }
