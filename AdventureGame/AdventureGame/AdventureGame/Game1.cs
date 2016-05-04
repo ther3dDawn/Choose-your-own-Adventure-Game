@@ -54,6 +54,28 @@ namespace Adventure_Project
         
         Rectangle nurseMedWardRect;
         Texture2D nurseMedWardText;
+        
+        /*
+        *These are the backgrounds
+        */ 
+        
+        Rectangle hallwayBackgroundRect;
+        Texture2D hallwayBackgroundText;
+        
+        Rectangle medicalWardBackgroundRect;
+        Texture2D medicalWardBackgroundText;
+        
+        Rectangle roomBackgroundRect;
+        Texture2D roomBackgroundText;
+        
+        Rectangle adminOfficeBackgroundRect;
+        Texture2D adminOfficeBackgroundText;
+        
+        Rectangle boyWinGameoverBackgroundRect;
+        Texture2D boyWinGameoverBackgroundText;
+        
+        Rectangle girlWinGameoverBackgroundRect;
+        Texture2D girlWinGameoverBackgroundText;
 
         public Game1()
         {
@@ -95,6 +117,10 @@ namespace Adventure_Project
             girlAfterText = Content.Load<Texture2D>("GirlAfterPatient");
             nurseGroupText = Content.Load<Texture2D>("group of nurses");
             nurseText = Content.Load<Texture2D>("nurse1");
+            
+            /*
+            *These are the textures for the backgrounds
+            */
 
             // TODO: use this.Content to load your game content here
         }
