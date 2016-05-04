@@ -18,6 +18,16 @@ namespace Adventure_Project
     {
         Start, Game, Help, Gameover, Losing
     }
+    
+    //Possible way of handling story
+    //Strings might also be useful to indicate decision forks.
+    /*
+    enum choicePath
+    {
+        
+    }
+    */
+    
     public class Game1 : Microsoft.Xna.Framework.Game
     {
         GraphicsDeviceManager graphics;
@@ -151,7 +161,8 @@ namespace Adventure_Project
             
                /*
              * Be Sure to add comments to your code so we know what is going on. 
-             * It is much faster and easier to read the comments you write explaining the code than trying to decipher your code and probably misinterperting it
+             * It is much faster and easier to read the comments you write explaining the code than
+             * trying to decipher your code
              * So for this update that changes the colors, I am confused on when each colors changes to another and what buttons control what. 
              * Something that can be done to prevent this is to write an explaination:
              * 
