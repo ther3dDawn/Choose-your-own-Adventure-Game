@@ -16,17 +16,21 @@ namespace Adventure_Project
     /// </summary>
     enum Screen
     {
-        Start, Game, Help, Gameover
+        Start, Game, Help, Gameover, Losing
     }
     public class Game1 : Microsoft.Xna.Framework.Game
     {
         GraphicsDeviceManager graphics;
         SpriteBatch spriteBatch;
         Screen screentype = Screen.Start;
+        Screen oldscreentype;
         MouseState oldMouse = Mouse.GetState();
-        Color[] color = new Color[4] { Color.Red, Color.White, Color.Black, Color.Green};
+        Color[] color = new Color[5] { Color.Red, Color.White, Color.Black, Color.Green, Color.Purple };
+        string[] endingCredits = new string[6] { "Congratulations you escaped!", "Created by:", "Alyana Alvarez",
+            "Duncan Hadley", "Nathan Johnson", "Ezinne Megwa" };
 
         SpriteFont EndingScreenFont;
+        SpriteFont EndingScreenCredits;
 
         public Game1()
         {
@@ -56,6 +60,7 @@ namespace Adventure_Project
             // Create a new SpriteBatch, which can be used to draw textures.
             spriteBatch = new SpriteBatch(GraphicsDevice);
             EndingScreenFont = Content.Load<SpriteFont>("SpriteFont1");
+            EndingScreenCredits = Content.Load<SpriteFont>("SpriteFont2");
 
             // TODO: use this.Content to load your game content here
         }
@@ -88,17 +93,26 @@ namespace Adventure_Project
                 && oldMouse.LeftButton == ButtonState.Released
                 && screentype == Screen.Start)
             {
-                screentype = Screen.Gameover;
+                screentype = Screen.Game;
             }
 
             if (Key.IsKeyDown(Keys.H) && screentype == Screen.Game)
             {
+                oldscreentype = Screen.Game;
                 screentype = Screen.Help;
             }
-
-            if (Key.IsKeyDown(Keys.T) || Key.IsKeyDown(Keys.T) && screentype == Screen.Help)
+            else if (Key.IsKeyDown(Keys.B) && screentype == Screen.Help && oldscreentype == Screen.Game)
             {
                 screentype = Screen.Game;
+            }
+
+            if (Key.IsKeyDown(Keys.H) && screentype == Screen.Start)
+            {
+                screentype = Screen.Help;
+            }
+            else if (Key.IsKeyDown(Keys.B) && screentype == Screen.Help)
+            {
+                screentype = Screen.Start;
             }
 
             if (Key.IsKeyDown(Keys.G) && screentype == Screen.Game)
@@ -109,6 +123,11 @@ namespace Adventure_Project
             if (Key.IsKeyDown(Keys.S) && screentype == Screen.Gameover)
             {
                 screentype = Screen.Start;
+            }
+            
+            if (Key.IsKeyDown(Keys.L) && screentype == Screen.Game)
+            {
+                screentype = Screen.Losing;
             }
 
             oldMouse = mouse;
@@ -135,16 +154,20 @@ namespace Adventure_Project
             else if (screentype == Screen.Gameover)
             {
                 GraphicsDevice.Clear(color[0]);
-                spriteBatch.DrawString(EndingScreenFont, "Congratulations you escaped!", new Vector2(250, 200), Color.White);
-                spriteBatch.DrawString(EndingScreenFont, "Created by:", new Vector2(350, 220), Color.White);
-                spriteBatch.DrawString(EndingScreenFont, "Dani Alvarez", new Vector2(335, 240), Color.White);
-                spriteBatch.DrawString(EndingScreenFont, "Duncan Hadley", new Vector2(330, 260), Color.White);
-                spriteBatch.DrawString(EndingScreenFont, "Nathan Johnson", new Vector2(327, 280), Color.White);
-                spriteBatch.DrawString(EndingScreenFont, "Ezinne Megwa", new Vector2(340, 300), Color.White);
+                spriteBatch.DrawString(EndingScreenFont, endingCredits[0], new Vector2(125, 100), Color.White);
+                spriteBatch.DrawString(EndingScreenCredits, endingCredits[1], new Vector2(350, 220), Color.White);
+                spriteBatch.DrawString(EndingScreenCredits, endingCredits[2], new Vector2(335, 240), Color.White);
+                spriteBatch.DrawString(EndingScreenCredits, endingCredits[3], new Vector2(330, 260), Color.White);
+                spriteBatch.DrawString(EndingScreenCredits, endingCredits[4], new Vector2(327, 280), Color.White);
+                spriteBatch.DrawString(EndingScreenCredits, endingCredits[5], new Vector2(340, 300), Color.White);
             }
             else if (screentype == Screen.Game)
             {
                 GraphicsDevice.Clear(color[3]);
+            }
+            else if (screentype == Screen.Losing)
+            {
+                GraphicsDevice.Clear(color[4]);
             }
 
             spriteBatch.End();
