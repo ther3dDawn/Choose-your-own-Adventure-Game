@@ -1,0 +1,15 @@
+Content\SpriteFont1.xnb
+Content\SpriteFont2.xnb
+Content\GirlPatient.xnb
+Content\GirlAfterPatient.xnb
+Content\BoyPatient.xnb
+Content\BoyAfterPatient.xnb
+Content\group of nurses.xnb
+Content\nurse1.xnb
+Content\MHAO.xnb
+Content\MHGirlWin.xnb
+Content\MHGuyWin.xnb
+Content\MHH.xnb
+Content\MHMW.xnb
+Content\MHRoom.xnb
+Content\outside of asylum.xnb
