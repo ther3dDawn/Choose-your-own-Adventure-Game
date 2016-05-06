@@ -42,6 +42,9 @@ namespace Adventure_Project
         SpriteFont EndingScreenFont;
         SpriteFont EndingScreenCredits;
         
+        int screenWidth;
+        int screenHeight;
+        
         /*
         *These are the avatars
         */
@@ -103,6 +106,10 @@ namespace Adventure_Project
         {
             // TODO: Add your initialization logic here
             this.IsMouseVisible = true;
+            screenWidth = graphics.GraphicsDevice.Viewport.Width;
+            screenHeight = graphics.GraphicsDevice.Viewport.Height;
+            girlWinGameoverBackgroundRect = new Rectangle(0, 0, screenWidth, screenHeight);
+            boyWinGameoverBackgroundRect = new Rectangle(0, 0, screenWidth, screenHeight);
             base.Initialize();
         }
 
@@ -131,6 +138,9 @@ namespace Adventure_Project
             /*
             *These are the textures for the backgrounds
             */
+            
+            girlWinGameoverBackgroundText = Content.Load<Texture2D>("MHGirlWin");
+            boyWinGameoverBackgroundText = Content.Load<Texture2D>("MHGuyWin");
 
             // TODO: use this.Content to load your game content here
         }
@@ -236,13 +246,13 @@ namespace Adventure_Project
             }
             else if (screentype == Screen.Gameover)
             {
-                GraphicsDevice.Clear(color[0]);
-                spriteBatch.DrawString(EndingScreenFont, endingCredits[0], new Vector2(125, 100), Color.White);
-                spriteBatch.DrawString(EndingScreenCredits, endingCredits[1], new Vector2(350, 220), Color.White);
-                spriteBatch.DrawString(EndingScreenCredits, endingCredits[2], new Vector2(335, 240), Color.White);
-                spriteBatch.DrawString(EndingScreenCredits, endingCredits[3], new Vector2(330, 260), Color.White);
-                spriteBatch.DrawString(EndingScreenCredits, endingCredits[4], new Vector2(327, 280), Color.White);
-                spriteBatch.DrawString(EndingScreenCredits, endingCredits[5], new Vector2(340, 300), Color.White);
+                spriteBatch.Draw(girlWinGameoverBackgroundText, girlWinGameoverBackgroundRect, Color.White);
+                spriteBatch.DrawString(EndingScreenFont, endingCredits[0], new Vector2(125, 100), Color.Red);
+                spriteBatch.DrawString(EndingScreenCredits, endingCredits[1], new Vector2(350, 220), Color.Red);
+                spriteBatch.DrawString(EndingScreenCredits, endingCredits[2], new Vector2(335, 240), Color.Red);
+                spriteBatch.DrawString(EndingScreenCredits, endingCredits[3], new Vector2(330, 260), Color.Red);
+                spriteBatch.DrawString(EndingScreenCredits, endingCredits[4], new Vector2(327, 280), Color.Red);
+                spriteBatch.DrawString(EndingScreenCredits, endingCredits[5], new Vector2(340, 300), Color.Red);
             }
             else if (screentype == Screen.Game)
             {
