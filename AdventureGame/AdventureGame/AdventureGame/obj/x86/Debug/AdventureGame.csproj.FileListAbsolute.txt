@@ -1,0 +1,23 @@
+C:\Users\128612\Desktop\Choose-your-own-Adventure-Game-Ending-Screen-Edit\Choose-your-own-Adventure-Game-Ending-Screen-Edit\AdventureGame\AdventureGame\AdventureGame\bin\x86\Debug\Content\SpriteFont1.xnb
+C:\Users\128612\Desktop\Choose-your-own-Adventure-Game-Ending-Screen-Edit\Choose-your-own-Adventure-Game-Ending-Screen-Edit\AdventureGame\AdventureGame\AdventureGame\bin\x86\Debug\Content\SpriteFont2.xnb
+C:\Users\128612\Desktop\Choose-your-own-Adventure-Game-Ending-Screen-Edit\Choose-your-own-Adventure-Game-Ending-Screen-Edit\AdventureGame\AdventureGame\AdventureGame\bin\x86\Debug\Content\BadNurse.xnb
+C:\Users\128612\Desktop\Choose-your-own-Adventure-Game-Ending-Screen-Edit\Choose-your-own-Adventure-Game-Ending-Screen-Edit\AdventureGame\AdventureGame\AdventureGame\bin\x86\Debug\Content\BoyAfterPatient.xnb
+C:\Users\128612\Desktop\Choose-your-own-Adventure-Game-Ending-Screen-Edit\Choose-your-own-Adventure-Game-Ending-Screen-Edit\AdventureGame\AdventureGame\AdventureGame\bin\x86\Debug\Content\BoyPatient.xnb
+C:\Users\128612\Desktop\Choose-your-own-Adventure-Game-Ending-Screen-Edit\Choose-your-own-Adventure-Game-Ending-Screen-Edit\AdventureGame\AdventureGame\AdventureGame\bin\x86\Debug\Content\GirlAfterPatient.xnb
+C:\Users\128612\Desktop\Choose-your-own-Adventure-Game-Ending-Screen-Edit\Choose-your-own-Adventure-Game-Ending-Screen-Edit\AdventureGame\AdventureGame\AdventureGame\bin\x86\Debug\Content\GirlPatient.xnb
+C:\Users\128612\Desktop\Choose-your-own-Adventure-Game-Ending-Screen-Edit\Choose-your-own-Adventure-Game-Ending-Screen-Edit\AdventureGame\AdventureGame\AdventureGame\bin\x86\Debug\Content\group of nurses.xnb
+C:\Users\128612\Desktop\Choose-your-own-Adventure-Game-Ending-Screen-Edit\Choose-your-own-Adventure-Game-Ending-Screen-Edit\AdventureGame\AdventureGame\AdventureGame\bin\x86\Debug\Content\MHAO.xnb
+C:\Users\128612\Desktop\Choose-your-own-Adventure-Game-Ending-Screen-Edit\Choose-your-own-Adventure-Game-Ending-Screen-Edit\AdventureGame\AdventureGame\AdventureGame\bin\x86\Debug\Content\MHGirlWin.xnb
+C:\Users\128612\Desktop\Choose-your-own-Adventure-Game-Ending-Screen-Edit\Choose-your-own-Adventure-Game-Ending-Screen-Edit\AdventureGame\AdventureGame\AdventureGame\bin\x86\Debug\Content\MHGuyWin.xnb
+C:\Users\128612\Desktop\Choose-your-own-Adventure-Game-Ending-Screen-Edit\Choose-your-own-Adventure-Game-Ending-Screen-Edit\AdventureGame\AdventureGame\AdventureGame\bin\x86\Debug\Content\MHH.xnb
+C:\Users\128612\Desktop\Choose-your-own-Adventure-Game-Ending-Screen-Edit\Choose-your-own-Adventure-Game-Ending-Screen-Edit\AdventureGame\AdventureGame\AdventureGame\bin\x86\Debug\Content\MHMW.xnb
+C:\Users\128612\Desktop\Choose-your-own-Adventure-Game-Ending-Screen-Edit\Choose-your-own-Adventure-Game-Ending-Screen-Edit\AdventureGame\AdventureGame\AdventureGame\bin\x86\Debug\Content\MHRoom.xnb
+C:\Users\128612\Desktop\Choose-your-own-Adventure-Game-Ending-Screen-Edit\Choose-your-own-Adventure-Game-Ending-Screen-Edit\AdventureGame\AdventureGame\AdventureGame\bin\x86\Debug\Content\nurse1.xnb
+C:\Users\128612\Desktop\Choose-your-own-Adventure-Game-Ending-Screen-Edit\Choose-your-own-Adventure-Game-Ending-Screen-Edit\AdventureGame\AdventureGame\AdventureGame\bin\x86\Debug\Content\outside of asylum.xnb
+C:\Users\128612\Desktop\Choose-your-own-Adventure-Game-Ending-Screen-Edit\Choose-your-own-Adventure-Game-Ending-Screen-Edit\AdventureGame\AdventureGame\AdventureGame\bin\x86\Debug\AdventureGame.exe
+C:\Users\128612\Desktop\Choose-your-own-Adventure-Game-Ending-Screen-Edit\Choose-your-own-Adventure-Game-Ending-Screen-Edit\AdventureGame\AdventureGame\AdventureGame\bin\x86\Debug\AdventureGame.pdb
+C:\Users\128612\Desktop\Choose-your-own-Adventure-Game-Ending-Screen-Edit\Choose-your-own-Adventure-Game-Ending-Screen-Edit\AdventureGame\AdventureGame\AdventureGame\obj\x86\Debug\AdventureGame.csprojResolveAssemblyReference.cache
+C:\Users\128612\Desktop\Choose-your-own-Adventure-Game-Ending-Screen-Edit\Choose-your-own-Adventure-Game-Ending-Screen-Edit\AdventureGame\AdventureGame\AdventureGame\obj\x86\Debug\Microsoft.Xna.Framework.RuntimeProfile.txt
+C:\Users\128612\Desktop\Choose-your-own-Adventure-Game-Ending-Screen-Edit\Choose-your-own-Adventure-Game-Ending-Screen-Edit\AdventureGame\AdventureGame\AdventureGame\obj\x86\Debug\AdventureGame.exe
+C:\Users\128612\Desktop\Choose-your-own-Adventure-Game-Ending-Screen-Edit\Choose-your-own-Adventure-Game-Ending-Screen-Edit\AdventureGame\AdventureGame\AdventureGame\obj\x86\Debug\AdventureGame.pdb
+C:\Users\128612\Desktop\Choose-your-own-Adventure-Game-Ending-Screen-Edit\Choose-your-own-Adventure-Game-Ending-Screen-Edit\AdventureGame\AdventureGame\AdventureGame\bin\x86\Debug\Content\Avatar Select Screen.xnb

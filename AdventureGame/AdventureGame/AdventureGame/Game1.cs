@@ -16,7 +16,7 @@ namespace AdventureGame
     /// </summary>
     enum Screen
     {
-        Start, Game, Help, Gameover, Losing
+        Start, Describe, AvatarSelect, Game, Help, Gameover, Losing
     }
 
     //Possible way of handling story
@@ -30,17 +30,17 @@ namespace AdventureGame
 
     // Game Screen will have multiple different screens inside of it for the different areas of the game
     // Also short solution for choosing which Gameover Victory Screen you get
-    enum GameScrnScreens
+    /*enum GameScrnScreens
     {
         AvatarSelect, Game
-    }
+    }*/
 
     public class Game1 : Microsoft.Xna.Framework.Game
     {
         GraphicsDeviceManager graphics;
         SpriteBatch spriteBatch;
         Screen screentype = Screen.Start;
-        GameScrnScreens gameScreentype;
+        //GameScrnScreens gameScreentype;
         Screen oldscreentype;
         MouseState oldMouse = Mouse.GetState();
         Color[] color = new Color[4] { Color.Red, Color.Black, Color.Green, Color.Purple };
@@ -101,6 +101,9 @@ namespace AdventureGame
         Rectangle startingScreenBackgroundRect;
         Texture2D startingScreenBackgroundText;
 
+        Rectangle AvatarSelectScreenRect;
+        Texture2D AvatarSelectText;
+
         public Game1()
         {
             graphics = new GraphicsDeviceManager(this);
@@ -127,6 +130,7 @@ namespace AdventureGame
             adminOfficeBackgroundRect = new Rectangle(0, 0, screenWidth, screenHeight);
             hallwayBackgroundRect = new Rectangle(0, 0, screenWidth, screenHeight);
             startingScreenBackgroundRect = new Rectangle(0, 0, screenWidth, screenHeight);
+            AvatarSelectScreenRect = new Rectangle(0, 0, screenWidth, screenHeight);
             base.Initialize();
         }
 
@@ -162,7 +166,8 @@ namespace AdventureGame
             medicalWardBackgroundText = Content.Load<Texture2D>("MHMW");
             adminOfficeBackgroundText = Content.Load<Texture2D>("MHAO");
             roomBackgroundText = Content.Load<Texture2D>("MHRoom");
-            //startingScreenBackgroundText = Content.Load<Texture2D>("outside of asylum");
+            startingScreenBackgroundText = Content.Load<Texture2D>("outside of asylum");
+            AvatarSelectText = Content.Load<Texture2D>("Avatar Select Screen");
 
             // TODO: use this.Content to load your game content here
         }
@@ -204,17 +209,37 @@ namespace AdventureGame
             */
 
             //The Start to Game Screen will go from the Start to the first Game Screen the AvatarSelect
-            if (mouse.LeftButton == ButtonState.Pressed
+            /*if (mouse.LeftButton == ButtonState.Pressed
                 && oldMouse.LeftButton == ButtonState.Released 
                 && screentype == Screen.Start)
             {
-                screentype = Screen.Game;
-                if (screentype == Screen.Game)
+               
+            }*/
+            
+            
+                if (screentype == Screen.Start)
                 {
-                    gameScreentype = GameScrnScreens.AvatarSelect;
-                    screentype = (Screen)gameScreentype;
+                    if (mouse.LeftButton == ButtonState.Pressed
+                        && oldMouse.LeftButton == ButtonState.Released
+                        )
+                    {
+                        screentype = Screen.AvatarSelect;
+                    }
+                    /*gameScreentype = GameScrnScreens.AvatarSelect;
+                    screentype = (Screen)gameScreentype;*/
                 }
-            }
+                if (screentype == Screen.AvatarSelect)
+                {
+                    if (mouse.LeftButton == ButtonState.Pressed
+                        && oldMouse.LeftButton == ButtonState.Released
+                        )
+                        if ((mouse.X > girlBeforeRect.X && mouse.X < girlBeforeRect.X + girlBeforeRect.Width) &&
+                        (mouse.Y > girlBeforeRect.Y && mouse.Y < girlBeforeRect.Y + girlBeforeRect.Height) || (mouse.X > boyBeforeRect.X && mouse.X < boyBeforeRect.X + boyBeforeRect.Width) &&
+                        (mouse.Y > boyBeforeRect.Y && mouse.Y < boyBeforeRect.Y + boyBeforeRect.Height))
+                        {
+                            screentype = Screen.Game;
+                        }
+                }
             
             if (Key.IsKeyDown(Keys.H) && screentype == Screen.Game)
             {
@@ -273,7 +298,7 @@ namespace AdventureGame
             if (screentype == Screen.Start)
             {
                 GraphicsDevice.Clear(color[0]);
-                //spriteBatch.Draw(startingScreenBackgroundText, startingScreenBackgroundRect, Color.White);
+                spriteBatch.Draw(startingScreenBackgroundText, startingScreenBackgroundRect, Color.White);
             }
             else if (screentype == Screen.Help)
             {
@@ -289,9 +314,14 @@ namespace AdventureGame
                 spriteBatch.DrawString(EndingScreenCredits, endingCredits[4], new Vector2(327, 280), Color.Red);
                 spriteBatch.DrawString(EndingScreenCredits, endingCredits[5], new Vector2(340, 300), Color.Red);
             }
-            else if (screentype == Screen.Game)
+            else if (screentype == Screen.AvatarSelect)
             {
-                GraphicsDevice.Clear(color[2]);
+                //screentype = Screen.AvatarSelect;
+                spriteBatch.Draw(AvatarSelectText, AvatarSelectScreenRect, Color.White);
+                spriteBatch.Draw(girlBeforeText,girlBeforeRect=new Rectangle(600,100,100,400), Color.White);
+                spriteBatch.Draw(BoyBeforeText, boyBeforeRect = new Rectangle(100, 100, 100, 400), Color.White);
+
+                
             }
             else if (screentype == Screen.Losing)
             {
