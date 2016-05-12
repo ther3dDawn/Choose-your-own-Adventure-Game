@@ -16,9 +16,9 @@ namespace AdventureGame
     /// </summary>
     enum Screen
     {
-        Start, Game, Help, Gameover, Losing
+        Start, Describe, AvatarSelect, Game, Help, Gameover, Losing
     }
-    
+
     //Possible way of handling story
     //Strings might also be useful to indicate decision forks.
     /*
@@ -27,7 +27,7 @@ namespace AdventureGame
         
     }
     */
-    
+
     public class Game1 : Microsoft.Xna.Framework.Game
     {
         GraphicsDeviceManager graphics;
@@ -41,14 +41,15 @@ namespace AdventureGame
 
         SpriteFont EndingScreenFont;
         SpriteFont EndingScreenCredits;
-        
+        SpriteFont avatarFont;
+
         int screenWidth;
         int screenHeight;
-        
+
         /*
         *These are the avatars
         */
-        
+
         Rectangle boyBeforeRect;
         Texture2D BoyBeforeText;
         Rectangle boyAfterRect;
@@ -58,37 +59,57 @@ namespace AdventureGame
         Texture2D girlBeforeText;
         Rectangle girlAfterRect;
         Texture2D girlAfterText;
-        
+
         Rectangle nurseGroupRect;
         Texture2D nurseGroupText;
-        
+
         Rectangle nurseRect;
         Texture2D nurseText;
-        
+
         Rectangle nurseMedWardRect;
         Texture2D nurseMedWardText;
-        
+
         /*
         *These are the backgrounds
-        */ 
-        
+        */
+
         Rectangle hallwayBackgroundRect;
         Texture2D hallwayBackgroundText;
-        
+
         Rectangle medicalWardBackgroundRect;
         Texture2D medicalWardBackgroundText;
-        
+
         Rectangle roomBackgroundRect;
         Texture2D roomBackgroundText;
-        
+
         Rectangle adminOfficeBackgroundRect;
         Texture2D adminOfficeBackgroundText;
-        
+
         Rectangle boyWinGameoverBackgroundRect;
         Texture2D boyWinGameoverBackgroundText;
-        
+
         Rectangle girlWinGameoverBackgroundRect;
         Texture2D girlWinGameoverBackgroundText;
+
+        Rectangle startingScreenBackgroundRect;
+        Texture2D startingScreenBackgroundText;
+
+        Rectangle descriptionScreenBackgroundRect;
+        Texture2D descriptionScreenBackgroundText;
+
+        Rectangle AvatarSelectScreenRect;
+        Texture2D AvatarSelectText;
+
+        /*
+        * Other graphics
+        */
+
+        Rectangle startButtonRect;
+        Texture2D startButtonText;
+
+        Rectangle startButtonRect2;
+        Texture2D startButtonText2;
+
 
         public Game1()
         {
@@ -110,6 +131,21 @@ namespace AdventureGame
             screenHeight = graphics.GraphicsDevice.Viewport.Height;
             girlWinGameoverBackgroundRect = new Rectangle(0, 0, screenWidth, screenHeight);
             boyWinGameoverBackgroundRect = new Rectangle(0, 0, screenWidth, screenHeight);
+            roomBackgroundRect = new Rectangle(0, 0, screenWidth, screenHeight);
+            medicalWardBackgroundRect = new Rectangle(0, 0, screenWidth, screenHeight);
+            adminOfficeBackgroundRect = new Rectangle(0, 0, screenWidth, screenHeight);
+            hallwayBackgroundRect = new Rectangle(0, 0, screenWidth, screenHeight);
+            startingScreenBackgroundRect = new Rectangle(0, 0, screenWidth, screenHeight);
+            descriptionScreenBackgroundRect = new Rectangle(0, 0, screenWidth, screenHeight);
+            AvatarSelectScreenRect = new Rectangle(0, 0, screenWidth, screenHeight);
+
+            /*
+            *These are for the other graphics
+            */
+
+            startButtonRect = new Rectangle(380, 390, 50, 50);
+            startButtonRect2 = new Rectangle(675, 400, 50, 50);
+
             base.Initialize();
         }
 
@@ -123,24 +159,39 @@ namespace AdventureGame
             spriteBatch = new SpriteBatch(GraphicsDevice);
             EndingScreenFont = Content.Load<SpriteFont>("SpriteFont1");
             EndingScreenCredits = Content.Load<SpriteFont>("SpriteFont2");
-            
+            avatarFont = Content.Load<SpriteFont>("SpriteFont3");
+
             /*
             *These are the textures for the avatars
             */
-            
+
             BoyBeforeText = Content.Load<Texture2D>("BoyPatient");
             boyAfterText = Content.Load<Texture2D>("BoyAfterPatient");
             girlBeforeText = Content.Load<Texture2D>("GirlPatient");
             girlAfterText = Content.Load<Texture2D>("GirlAfterPatient");
             nurseGroupText = Content.Load<Texture2D>("group of nurses");
             nurseText = Content.Load<Texture2D>("nurse1");
-            
+
             /*
             *These are the textures for the backgrounds
             */
-            
+
             girlWinGameoverBackgroundText = Content.Load<Texture2D>("MHGirlWin");
             boyWinGameoverBackgroundText = Content.Load<Texture2D>("MHGuyWin");
+            hallwayBackgroundText = Content.Load<Texture2D>("MHH");
+            medicalWardBackgroundText = Content.Load<Texture2D>("MHMW");
+            adminOfficeBackgroundText = Content.Load<Texture2D>("MHAO");
+            roomBackgroundText = Content.Load<Texture2D>("MHRoom");
+            startingScreenBackgroundText = Content.Load<Texture2D>("outside of asylum");
+            descriptionScreenBackgroundText = Content.Load<Texture2D>("Description Screen");
+            AvatarSelectText = Content.Load<Texture2D>("Avatar Select Screen");
+
+            /*
+            *These are for the other graphics
+            */
+
+            startButtonText = Content.Load<Texture2D>("start button");
+            startButtonText2 = Content.Load<Texture2D>("start button");
 
             // TODO: use this.Content to load your game content here
         }
@@ -168,25 +219,49 @@ namespace AdventureGame
                 this.Exit();
 
             // TODO: Add your update logic here
-            
-               /*
-             * Be Sure to add comments to your code so we know what is going on. 
-             * It is much faster and easier to read the comments you write explaining the code than
-             * trying to decipher your code
-             * So for this update that changes the colors, I am confused on when each colors changes to another and what buttons control what. 
-             * Something that can be done to prevent this is to write an explaination:
-             * 
-             * 'H' button = Help Screen
-             * 'B' button= Game Screen
-             * ....and so on.
-             * 
-             */
+
+            /*
+          * Be Sure to add comments to your code so we know what is going on. 
+          * It is much faster and easier to read the comments you write explaining the code than
+          * trying to decipher your code
+          * So for this update that changes the colors, I am confused on when each colors changes to another and what buttons control what. 
+          * Something that can be done to prevent this is to write an explaination:
+          * 
+          * 'H' button = Help Screen
+          * 'B' button= Game Screen
+          * ....and so on.
+          * 
+          */
 
             if (mouse.LeftButton == ButtonState.Pressed
-                && oldMouse.LeftButton == ButtonState.Released
-                && screentype == Screen.Start)
+                && oldMouse.LeftButton == ButtonState.Released)
             {
-                screentype = Screen.Game;
+                if (screentype == Screen.Start &&
+                   (mouse.X > startButtonRect.X && mouse.X < (startButtonRect.X + startButtonRect.Width)) &&
+                   (mouse.Y > startButtonRect.Y && mouse.Y < (startButtonRect.Y + startButtonRect.Height)))
+                {
+                    screentype = Screen.Describe;
+                }
+
+                if (screentype == Screen.Describe &&
+                   (mouse.X > startButtonRect2.X && mouse.X < (startButtonRect2.X + startButtonRect2.Width)) &&
+                   (mouse.Y > startButtonRect2.Y && mouse.Y < (startButtonRect2.Y + startButtonRect2.Height)))
+                {
+                    screentype = Screen.AvatarSelect;
+                }
+
+                if (screentype == Screen.AvatarSelect)
+                {
+                    if (mouse.LeftButton == ButtonState.Pressed
+                        && oldMouse.LeftButton == ButtonState.Released
+                        )
+                        if ((mouse.X > girlBeforeRect.X && mouse.X < girlBeforeRect.X + girlBeforeRect.Width) &&
+                        (mouse.Y > girlBeforeRect.Y && mouse.Y < girlBeforeRect.Y + girlBeforeRect.Height) || (mouse.X > boyBeforeRect.X && mouse.X < boyBeforeRect.X + boyBeforeRect.Width) &&
+                        (mouse.Y > boyBeforeRect.Y && mouse.Y < boyBeforeRect.Y + boyBeforeRect.Height))
+                        {
+                            screentype = Screen.Game;
+                        }
+                }
             }
 
             if (Key.IsKeyDown(Keys.H) && screentype == Screen.Game)
@@ -217,7 +292,7 @@ namespace AdventureGame
             {
                 screentype = Screen.Start;
             }
-            
+
             if (Key.IsKeyDown(Keys.L) && screentype == Screen.Game)
             {
                 screentype = Screen.Losing;
@@ -235,14 +310,31 @@ namespace AdventureGame
         {
 
             // TODO: Add your drawing code here
+            Vector2 textLocation1 = new Vector2(200, 50);
+            Vector2 textLocation2 = new Vector2(550, 50);
+
             spriteBatch.Begin();
             if (screentype == Screen.Start)
             {
-                GraphicsDevice.Clear(color[1]);
+                spriteBatch.Draw(startingScreenBackgroundText, startingScreenBackgroundRect, Color.White);
+                spriteBatch.Draw(startButtonText, startButtonRect, Color.White);
+            }
+            else if (screentype == Screen.Describe)
+            {
+                spriteBatch.Draw(descriptionScreenBackgroundText, descriptionScreenBackgroundRect, Color.White);
+                spriteBatch.Draw(startButtonText2, startButtonRect2, Color.White);
             }
             else if (screentype == Screen.Help)
             {
-                GraphicsDevice.Clear(color[2]);
+                GraphicsDevice.Clear(color[1]);
+            }
+            else if (screentype == Screen.AvatarSelect)
+            {
+                spriteBatch.Draw(AvatarSelectText, AvatarSelectScreenRect, Color.White);
+                spriteBatch.Draw(girlBeforeText, girlBeforeRect = new Rectangle(550, 85, 100, 375), Color.White);
+                spriteBatch.Draw(BoyBeforeText, boyBeforeRect = new Rectangle(200, 85, 100, 375), Color.White);
+                spriteBatch.DrawString(avatarFont, "Boy", textLocation1, Color.White);
+                spriteBatch.DrawString(avatarFont, "Girl", textLocation2, Color.White);
             }
             else if (screentype == Screen.Gameover)
             {
@@ -256,11 +348,11 @@ namespace AdventureGame
             }
             else if (screentype == Screen.Game)
             {
-                GraphicsDevice.Clear(color[3]);
+                GraphicsDevice.Clear(color[2]);
             }
             else if (screentype == Screen.Losing)
             {
-                GraphicsDevice.Clear(color[4]);
+                GraphicsDevice.Clear(color[3]);
             }
 
             spriteBatch.End();

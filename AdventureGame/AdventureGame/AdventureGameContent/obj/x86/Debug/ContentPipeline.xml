@@ -1,0 +1,235 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<XnaContent xmlns:Pipeline="Microsoft.Xna.Framework.Content.Pipeline">
+  <Asset Type="Pipeline:BuildItemCollection">
+    <Item>
+      <Source>Avatar Select Screen.png</Source>
+      <Name>Avatar Select Screen</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\128612\Desktop\Choose-your-own-Adventure-Game-May-12-4A-Edit-Dani\Choose-your-own-Adventure-Game-May-12-4A-Edit-Dani\AdventureGame\AdventureGame\AdventureGame\bin\x86\Debug\Content\Avatar Select Screen.xnb</Output>
+      <Time>2016-05-12T15:47:49.128966-05:00</Time>
+    </Item>
+    <Item>
+      <Source>BadNurse.png</Source>
+      <Name>BadNurse</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\128612\Desktop\Choose-your-own-Adventure-Game-May-12-4A-Edit-Dani\Choose-your-own-Adventure-Game-May-12-4A-Edit-Dani\AdventureGame\AdventureGame\AdventureGame\bin\x86\Debug\Content\BadNurse.xnb</Output>
+      <Time>2016-05-12T15:48:04.7780671-05:00</Time>
+    </Item>
+    <Item>
+      <Source>BoyAfterPatient.png</Source>
+      <Name>BoyAfterPatient</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\128612\Desktop\Choose-your-own-Adventure-Game-May-12-4A-Edit-Dani\Choose-your-own-Adventure-Game-May-12-4A-Edit-Dani\AdventureGame\AdventureGame\AdventureGame\bin\x86\Debug\Content\BoyAfterPatient.xnb</Output>
+      <Time>2016-05-12T15:48:04.7780671-05:00</Time>
+    </Item>
+    <Item>
+      <Source>BoyPatient.png</Source>
+      <Name>BoyPatient</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\128612\Desktop\Choose-your-own-Adventure-Game-May-12-4A-Edit-Dani\Choose-your-own-Adventure-Game-May-12-4A-Edit-Dani\AdventureGame\AdventureGame\AdventureGame\bin\x86\Debug\Content\BoyPatient.xnb</Output>
+      <Time>2016-05-12T15:48:04.7780671-05:00</Time>
+    </Item>
+    <Item>
+      <Source>GirlAfterPatient.png</Source>
+      <Name>GirlAfterPatient</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\128612\Desktop\Choose-your-own-Adventure-Game-May-12-4A-Edit-Dani\Choose-your-own-Adventure-Game-May-12-4A-Edit-Dani\AdventureGame\AdventureGame\AdventureGame\bin\x86\Debug\Content\GirlAfterPatient.xnb</Output>
+      <Time>2016-05-12T15:48:04.7936674-05:00</Time>
+    </Item>
+    <Item>
+      <Source>GirlPatient.png</Source>
+      <Name>GirlPatient</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\128612\Desktop\Choose-your-own-Adventure-Game-May-12-4A-Edit-Dani\Choose-your-own-Adventure-Game-May-12-4A-Edit-Dani\AdventureGame\AdventureGame\AdventureGame\bin\x86\Debug\Content\GirlPatient.xnb</Output>
+      <Time>2016-05-12T15:48:04.7936674-05:00</Time>
+    </Item>
+    <Item>
+      <Source>group of nurses.png</Source>
+      <Name>group of nurses</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\128612\Desktop\Choose-your-own-Adventure-Game-May-12-4A-Edit-Dani\Choose-your-own-Adventure-Game-May-12-4A-Edit-Dani\AdventureGame\AdventureGame\AdventureGame\bin\x86\Debug\Content\group of nurses.xnb</Output>
+      <Time>2016-05-12T15:48:04.7936674-05:00</Time>
+    </Item>
+    <Item>
+      <Source>MHAO.jpg</Source>
+      <Name>MHAO</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\128612\Desktop\Choose-your-own-Adventure-Game-May-12-4A-Edit-Dani\Choose-your-own-Adventure-Game-May-12-4A-Edit-Dani\AdventureGame\AdventureGame\AdventureGame\bin\x86\Debug\Content\MHAO.xnb</Output>
+      <Time>2016-05-12T15:48:04.7936674-05:00</Time>
+    </Item>
+    <Item>
+      <Source>MHGirlWin.jpg</Source>
+      <Name>MHGirlWin</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\128612\Desktop\Choose-your-own-Adventure-Game-May-12-4A-Edit-Dani\Choose-your-own-Adventure-Game-May-12-4A-Edit-Dani\AdventureGame\AdventureGame\AdventureGame\bin\x86\Debug\Content\MHGirlWin.xnb</Output>
+      <Time>2016-05-12T15:48:04.8092677-05:00</Time>
+    </Item>
+    <Item>
+      <Source>MHGuyWin.jpg</Source>
+      <Name>MHGuyWin</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\128612\Desktop\Choose-your-own-Adventure-Game-May-12-4A-Edit-Dani\Choose-your-own-Adventure-Game-May-12-4A-Edit-Dani\AdventureGame\AdventureGame\AdventureGame\bin\x86\Debug\Content\MHGuyWin.xnb</Output>
+      <Time>2016-05-12T15:48:04.8092677-05:00</Time>
+    </Item>
+    <Item>
+      <Source>MHH.jpg</Source>
+      <Name>MHH</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\128612\Desktop\Choose-your-own-Adventure-Game-May-12-4A-Edit-Dani\Choose-your-own-Adventure-Game-May-12-4A-Edit-Dani\AdventureGame\AdventureGame\AdventureGame\bin\x86\Debug\Content\MHH.xnb</Output>
+      <Time>2016-05-12T15:48:04.8092677-05:00</Time>
+    </Item>
+    <Item>
+      <Source>MHMW.jpg</Source>
+      <Name>MHMW</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\128612\Desktop\Choose-your-own-Adventure-Game-May-12-4A-Edit-Dani\Choose-your-own-Adventure-Game-May-12-4A-Edit-Dani\AdventureGame\AdventureGame\AdventureGame\bin\x86\Debug\Content\MHMW.xnb</Output>
+      <Time>2016-05-12T15:48:04.824868-05:00</Time>
+    </Item>
+    <Item>
+      <Source>MHRoom.jpg</Source>
+      <Name>MHRoom</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\128612\Desktop\Choose-your-own-Adventure-Game-May-12-4A-Edit-Dani\Choose-your-own-Adventure-Game-May-12-4A-Edit-Dani\AdventureGame\AdventureGame\AdventureGame\bin\x86\Debug\Content\MHRoom.xnb</Output>
+      <Time>2016-05-12T15:48:04.824868-05:00</Time>
+    </Item>
+    <Item>
+      <Source>nurse1.png</Source>
+      <Name>nurse1</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\128612\Desktop\Choose-your-own-Adventure-Game-May-12-4A-Edit-Dani\Choose-your-own-Adventure-Game-May-12-4A-Edit-Dani\AdventureGame\AdventureGame\AdventureGame\bin\x86\Debug\Content\nurse1.xnb</Output>
+      <Time>2016-05-12T15:48:04.824868-05:00</Time>
+    </Item>
+    <Item>
+      <Source>SpriteFont1.spritefont</Source>
+      <Name>SpriteFont1</Name>
+      <Importer>FontDescriptionImporter</Importer>
+      <Processor>FontDescriptionProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\128612\Desktop\Choose-your-own-Adventure-Game-May-12-4A-Edit-Dani\Choose-your-own-Adventure-Game-May-12-4A-Edit-Dani\AdventureGame\AdventureGame\AdventureGame\bin\x86\Debug\Content\SpriteFont1.xnb</Output>
+      <Time>2016-05-12T15:45:51.6976775-05:00</Time>
+    </Item>
+    <Item>
+      <Source>SpriteFont2.spritefont</Source>
+      <Name>SpriteFont2</Name>
+      <Importer>FontDescriptionImporter</Importer>
+      <Processor>FontDescriptionProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\128612\Desktop\Choose-your-own-Adventure-Game-May-12-4A-Edit-Dani\Choose-your-own-Adventure-Game-May-12-4A-Edit-Dani\AdventureGame\AdventureGame\AdventureGame\bin\x86\Debug\Content\SpriteFont2.xnb</Output>
+      <Time>2016-05-12T15:45:51.7132778-05:00</Time>
+    </Item>
+    <Item>
+      <Source>SpriteFont3.spritefont</Source>
+      <Name>SpriteFont3</Name>
+      <Importer>FontDescriptionImporter</Importer>
+      <Processor>FontDescriptionProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\128612\Desktop\Choose-your-own-Adventure-Game-May-12-4A-Edit-Dani\Choose-your-own-Adventure-Game-May-12-4A-Edit-Dani\AdventureGame\AdventureGame\AdventureGame\bin\x86\Debug\Content\SpriteFont3.xnb</Output>
+      <Time>2016-05-12T15:50:21.7586795-05:00</Time>
+    </Item>
+    <Item>
+      <Source>outside of asylum.png</Source>
+      <Name>outside of asylum</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\128612\Desktop\Choose-your-own-Adventure-Game-May-12-4A-Edit-Dani\Choose-your-own-Adventure-Game-May-12-4A-Edit-Dani\AdventureGame\AdventureGame\AdventureGame\bin\x86\Debug\Content\outside of asylum.xnb</Output>
+      <Time>2016-05-12T15:51:24.1566789-05:00</Time>
+    </Item>
+    <Item>
+      <Source>Description Screen.png</Source>
+      <Name>Description Screen</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\128612\Desktop\Choose-your-own-Adventure-Game-May-12-4A-Edit-Dani\Choose-your-own-Adventure-Game-May-12-4A-Edit-Dani\AdventureGame\AdventureGame\AdventureGame\bin\x86\Debug\Content\Description Screen.xnb</Output>
+      <Time>2016-05-12T15:53:41.3040223-05:00</Time>
+    </Item>
+    <Item>
+      <Source>start button.png</Source>
+      <Name>start button</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\128612\Desktop\Choose-your-own-Adventure-Game-May-12-4A-Edit-Dani\Choose-your-own-Adventure-Game-May-12-4A-Edit-Dani\AdventureGame\AdventureGame\AdventureGame\bin\x86\Debug\Content\start button.xnb</Output>
+      <Time>2016-05-12T15:53:50.3294167-05:00</Time>
+    </Item>
+    <Item>
+      <Source>play_again.png</Source>
+      <Name>play_again</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\128612\Desktop\Choose-your-own-Adventure-Game-May-12-4A-Edit-Dani\Choose-your-own-Adventure-Game-May-12-4A-Edit-Dani\AdventureGame\AdventureGame\AdventureGame\bin\x86\Debug\Content\play_again.xnb</Output>
+      <Time>2016-05-12T16:09:28.6800659-05:00</Time>
+    </Item>
+    <BuildSuccessful>true</BuildSuccessful>
+    <Settings>
+      <TargetPlatform>Windows</TargetPlatform>
+      <TargetProfile>HiDef</TargetProfile>
+      <BuildConfiguration>Debug</BuildConfiguration>
+      <CompressContent>false</CompressContent>
+      <RootDirectory>C:\Users\128612\Desktop\Choose-your-own-Adventure-Game-May-12-4A-Edit-Dani\Choose-your-own-Adventure-Game-May-12-4A-Edit-Dani\AdventureGame\AdventureGame\AdventureGameContent\</RootDirectory>
+      <LoggerRootDirectory>C:\Users\128612\Desktop\Choose-your-own-Adventure-Game-May-12-4A-Edit-Dani\Choose-your-own-Adventure-Game-May-12-4A-Edit-Dani\AdventureGame\AdventureGame\AdventureGame\</LoggerRootDirectory>
+      <IntermediateDirectory>C:\Users\128612\Desktop\Choose-your-own-Adventure-Game-May-12-4A-Edit-Dani\Choose-your-own-Adventure-Game-May-12-4A-Edit-Dani\AdventureGame\AdventureGame\AdventureGameContent\obj\x86\Debug\</IntermediateDirectory>
+      <OutputDirectory>C:\Users\128612\Desktop\Choose-your-own-Adventure-Game-May-12-4A-Edit-Dani\Choose-your-own-Adventure-Game-May-12-4A-Edit-Dani\AdventureGame\AdventureGame\AdventureGame\bin\x86\Debug\Content\</OutputDirectory>
+    </Settings>
+    <Assemblies>
+      <Assembly>
+        <Key>C:\Program Files (x86)\Microsoft XNA\XNA Game Studio\v4.0\References\Windows\x86\Microsoft.Xna.Framework.Content.Pipeline.XImporter.dll</Key>
+        <Value>2010-08-23T12:41:18-05:00</Value>
+      </Assembly>
+      <Assembly>
+        <Key>C:\Program Files (x86)\Microsoft XNA\XNA Game Studio\v4.0\References\Windows\x86\Microsoft.Xna.Framework.Content.Pipeline.VideoImporters.dll</Key>
+        <Value>2010-08-23T12:41:18-05:00</Value>
+      </Assembly>
+      <Assembly>
+        <Key>C:\Program Files (x86)\Microsoft XNA\XNA Game Studio\v4.0\References\Windows\x86\Microsoft.Xna.Framework.Content.Pipeline.TextureImporter.dll</Key>
+        <Value>2010-08-23T12:41:18-05:00</Value>
+      </Assembly>
+      <Assembly>
+        <Key>C:\Program Files (x86)\Microsoft XNA\XNA Game Studio\v4.0\References\Windows\x86\Microsoft.Xna.Framework.Content.Pipeline.FBXImporter.dll</Key>
+        <Value>2010-08-23T12:41:18-05:00</Value>
+      </Assembly>
+      <Assembly>
+        <Key>C:\Program Files (x86)\Microsoft XNA\XNA Game Studio\v4.0\References\Windows\x86\Microsoft.Xna.Framework.Content.Pipeline.EffectImporter.dll</Key>
+        <Value>2010-08-23T12:41:18-05:00</Value>
+      </Assembly>
+      <Assembly>
+        <Key>C:\Program Files (x86)\Microsoft XNA\XNA Game Studio\v4.0\References\Windows\x86\Microsoft.Xna.Framework.Content.Pipeline.AudioImporters.dll</Key>
+        <Value>2010-08-23T12:41:18-05:00</Value>
+      </Assembly>
+      <Assembly>
+        <Key>C:\Windows\Microsoft.Net\assembly\GAC_32\Microsoft.Xna.Framework.Content.Pipeline\v4.0_4.0.0.0__842cf8be1de50553\Microsoft.Xna.Framework.Content.Pipeline.dll</Key>
+        <Value>2015-04-29T07:56:17.6113824-05:00</Value>
+      </Assembly>
+    </Assemblies>
+  </Asset>
+</XnaContent>
