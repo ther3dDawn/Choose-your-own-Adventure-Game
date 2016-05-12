@@ -221,17 +221,18 @@ namespace AdventureGame
             // TODO: Add your update logic here
 
             /*
-          * Be Sure to add comments to your code so we know what is going on. 
-          * It is much faster and easier to read the comments you write explaining the code than
-          * trying to decipher your code
-          * So for this update that changes the colors, I am confused on when each colors changes to another and what buttons control what. 
-          * Something that can be done to prevent this is to write an explaination:
-          * 
-          * 'H' button = Help Screen
-          * 'B' button= Game Screen
-          * ....and so on.
-          * 
-          */
+             * mouse click from start screen changes to Game screen
+             * 'H' button = Help Screen and works for both the Start Screen and Game Screen
+             * 'B' button changes you back to the screen you were previously on before you used the Help Screen
+             * So for example if you were on the Start Screen and you pressed 'H' you would go to the Help Screen
+             * Then to get back you would click 'B' and that would take you back to the Start Screen
+             * If you do go to the Help Screen from the Game Screen the 'B' button would take you back to the Game Screen
+             * 'G' button from the Game Screen takes you to the Gameover Screen
+             * 'S' button from the Gameover Screen takes you to the Start Screen
+             * 'L' button from the Game Screen takes you to the Losing Screen
+            */
+            
+            //The Start to Game Screen will go from the Start to the first Game Screen the AvatarSelect
 
             if (mouse.LeftButton == ButtonState.Pressed
                 && oldMouse.LeftButton == ButtonState.Released)
@@ -310,6 +311,14 @@ namespace AdventureGame
         {
 
             // TODO: Add your drawing code here
+            
+             // TODO: Add your drawing code here
+            /*
+             * Help Screen = Black
+             * Game Screen = Green
+             * Losing Screen = Purple
+             * Start Screen = Red until picture is found
+            */
             Vector2 textLocation1 = new Vector2(200, 50);
             Vector2 textLocation2 = new Vector2(550, 50);
 
