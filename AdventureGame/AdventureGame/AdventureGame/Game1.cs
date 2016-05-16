@@ -35,7 +35,7 @@ namespace AdventureGame
         Screen screentype = Screen.Start;
         Screen oldscreentype;
         MouseState oldMouse = Mouse.GetState();
-        Color[] color = new Color[5] { Color.Red, Color.White, Color.Black, Color.Green, Color.Purple };
+        Color[] color = new Color[3] { Color.Black, Color.Green, Color.Purple };
         string[] endingCredits = new string[6] { "Congratulations you escaped!", "Created by:", "Dani Alvarez",
             "Duncan Hadley", "Nathan Johnson", "Ezinne Megwa" };
 
@@ -317,7 +317,6 @@ namespace AdventureGame
              * Help Screen = Black
              * Game Screen = Green
              * Losing Screen = Purple
-             * Start Screen = Red until picture is found
             */
             Vector2 textLocation1 = new Vector2(200, 50);
             Vector2 textLocation2 = new Vector2(550, 50);
@@ -335,7 +334,7 @@ namespace AdventureGame
             }
             else if (screentype == Screen.Help)
             {
-                GraphicsDevice.Clear(color[1]);
+                GraphicsDevice.Clear(color[0]);
             }
             else if (screentype == Screen.AvatarSelect)
             {
@@ -357,11 +356,11 @@ namespace AdventureGame
             }
             else if (screentype == Screen.Game)
             {
-                GraphicsDevice.Clear(color[2]);
+                GraphicsDevice.Clear(color[1]);
             }
             else if (screentype == Screen.Losing)
             {
-                GraphicsDevice.Clear(color[3]);
+                GraphicsDevice.Clear(color[2]);
             }
 
             spriteBatch.End();
