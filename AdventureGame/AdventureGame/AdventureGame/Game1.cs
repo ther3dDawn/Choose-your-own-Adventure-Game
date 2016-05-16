@@ -267,6 +267,7 @@ namespace AdventureGame
                         {
                             screentype = Screen.Game;
                         }
+                        // Decides which Gameover Screen you get
                         if ((mouse.X > girlBeforeRect.X && mouse.X < girlBeforeRect.X + girlBeforeRect.Width) &&
                        (mouse.Y > girlBeforeRect.Y && mouse.Y < girlBeforeRect.Y + girlBeforeRect.Height))
                         {
