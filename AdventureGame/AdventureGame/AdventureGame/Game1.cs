@@ -100,6 +100,9 @@ namespace AdventureGame
         Rectangle AvatarSelectScreenRect;
         Texture2D AvatarSelectText;
 
+        Rectangle VictoryScreenRect;
+        Texture2D VictoryScreenText;
+        
         /*
         * Other graphics
         */
@@ -254,14 +257,27 @@ namespace AdventureGame
                 if (screentype == Screen.AvatarSelect)
                 {
                     if (mouse.LeftButton == ButtonState.Pressed
-                        && oldMouse.LeftButton == ButtonState.Released
-                        )
+                        && oldMouse.LeftButton == ButtonState.Released)
+                    {
                         if ((mouse.X > girlBeforeRect.X && mouse.X < girlBeforeRect.X + girlBeforeRect.Width) &&
                         (mouse.Y > girlBeforeRect.Y && mouse.Y < girlBeforeRect.Y + girlBeforeRect.Height) || (mouse.X > boyBeforeRect.X && mouse.X < boyBeforeRect.X + boyBeforeRect.Width) &&
                         (mouse.Y > boyBeforeRect.Y && mouse.Y < boyBeforeRect.Y + boyBeforeRect.Height))
                         {
                             screentype = Screen.Game;
                         }
+                        if ((mouse.X > girlBeforeRect.X && mouse.X < girlBeforeRect.X + girlBeforeRect.Width) &&
+                       (mouse.Y > girlBeforeRect.Y && mouse.Y < girlBeforeRect.Y + girlBeforeRect.Height))
+                        {
+                            VictoryScreenRect = girlWinGameoverBackgroundRect;
+                            VictoryScreenText = girlWinGameoverBackgroundText;
+                        }
+                        if ((mouse.X > boyBeforeRect.X && mouse.X < boyBeforeRect.X + boyBeforeRect.Width) &&
+                       (mouse.Y > boyBeforeRect.Y && mouse.Y < boyBeforeRect.Y + boyBeforeRect.Height))
+                        {
+                            VictoryScreenRect = boyWinGameoverBackgroundRect;
+                            VictoryScreenText = boyWinGameoverBackgroundText;
+                        }
+                    }
                 }
             }
 
@@ -346,7 +362,7 @@ namespace AdventureGame
             }
             else if (screentype == Screen.Gameover)
             {
-                spriteBatch.Draw(girlWinGameoverBackgroundText, girlWinGameoverBackgroundRect, Color.White);
+                spriteBatch.Draw(VictoryScreenText, VictoryScreenRect, Color.White);
                 spriteBatch.DrawString(EndingScreenFont, endingCredits[0], new Vector2(125, 100), Color.Red);
                 spriteBatch.DrawString(EndingScreenCredits, endingCredits[1], new Vector2(350, 220), Color.Red);
                 spriteBatch.DrawString(EndingScreenCredits, endingCredits[2], new Vector2(335, 240), Color.Red);
