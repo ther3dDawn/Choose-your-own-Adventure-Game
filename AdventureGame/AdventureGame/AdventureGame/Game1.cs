@@ -42,6 +42,8 @@ namespace AdventureGame
         SpriteFont EndingScreenFont;
         SpriteFont EndingScreenCredits;
         SpriteFont avatarFont;
+        SpriteFont ActionOptionsFont; // Choices you have; blue boxes on CYOA Level Map
+        SpriteFont ResponseFont; // Effect of your action; pink boxes on CYOA Level Map
 
         int screenWidth;
         int screenHeight;
