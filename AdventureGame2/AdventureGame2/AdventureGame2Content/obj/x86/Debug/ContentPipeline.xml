@@ -190,6 +190,42 @@
       <Output>C:\Users\128612\Desktop\AdventureGame2\AdventureGame2\AdventureGame2\bin\x86\Debug\Content\SpriteFont3.xnb</Output>
       <Time>2016-05-16T15:20:18.0207534-05:00</Time>
     </Item>
+    <Item>
+      <Source>Help Screen.png</Source>
+      <Name>Help Screen</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\128612\Desktop\AdventureGame2\AdventureGame2\AdventureGame2\bin\x86\Debug\Content\Help Screen.xnb</Output>
+      <Time>2016-05-16T16:07:17.1701021-05:00</Time>
+    </Item>
+    <Item>
+      <Source>EffectBox.png</Source>
+      <Name>EffectBox</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\128612\Desktop\AdventureGame2\AdventureGame2\AdventureGame2\bin\x86\Debug\Content\EffectBox.xnb</Output>
+      <Time>2016-05-16T16:21:07.3736191-05:00</Time>
+    </Item>
+    <Item>
+      <Source>ChoiceBox.png</Source>
+      <Name>ChoiceBox</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\128612\Desktop\AdventureGame2\AdventureGame2\AdventureGame2\bin\x86\Debug\Content\ChoiceBox.xnb</Output>
+      <Time>2016-05-16T16:21:14.4595758-05:00</Time>
+    </Item>
+    <Item>
+      <Source>SpriteFont4.spritefont</Source>
+      <Name>SpriteFont4</Name>
+      <Importer>FontDescriptionImporter</Importer>
+      <Processor>FontDescriptionProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\128612\Desktop\AdventureGame2\AdventureGame2\AdventureGame2\bin\x86\Debug\Content\SpriteFont4.xnb</Output>
+      <Time>2016-05-18T16:08:10.6106188-05:00</Time>
+    </Item>
     <BuildSuccessful>true</BuildSuccessful>
     <Settings>
       <TargetPlatform>Windows</TargetPlatform>

@@ -105,6 +105,11 @@ namespace AdventureGame2
         Rectangle VictoryScreenRect;
         Texture2D VictoryScreenText;
 
+        Rectangle HelpScreenRect;
+        Texture2D HelpScreenText;
+
+        Texture2D GameScreenText;
+
         /*
         * Other graphics
         */
@@ -115,6 +120,19 @@ namespace AdventureGame2
         Rectangle startButtonRect2;
         Texture2D startButtonText2;
 
+        Rectangle CBRect1; //CB = Choice Box
+        Rectangle CBRect2; //CB = Choice Box
+
+        Texture2D ChoiceBoxText;
+        Rectangle EffectBoxRect;
+        Texture2D EffectBoxText;
+        
+        int x, y, w, h;//Cb positons
+        string Choice1;//choice text
+        string Choice2;
+        string Choice3;
+
+        string prompt;//effect text
 
         public Game1()
         {
@@ -143,6 +161,26 @@ namespace AdventureGame2
             startingScreenBackgroundRect = new Rectangle(0, 0, screenWidth, screenHeight);
             descriptionScreenBackgroundRect = new Rectangle(0, 0, screenWidth, screenHeight);
             AvatarSelectScreenRect = new Rectangle(0, 0, screenWidth, screenHeight);
+            HelpScreenRect = new Rectangle(0,0,screenWidth,screenHeight);
+
+            EffectBoxRect = new Rectangle(250, 50, 300, 100);
+
+            x = 100;
+            y = 300;
+            w = 200;
+            h = 70;
+
+            CBRect1 = new Rectangle(x,y,w,h);
+            CBRect2 = new Rectangle(x+400, y, w, h);
+
+
+            prompt = "You are getting ready to \nleave when the asylum \nbreaks out into chaos!";
+            Choice1 = "Run out into\n the storm!";
+            Choice2 = "Hide in your room!";
+            Choice3 = "";
+            
+
+
 
             /*
             *These are for the other graphics
@@ -165,8 +203,8 @@ namespace AdventureGame2
             EndingScreenFont = Content.Load<SpriteFont>("SpriteFont1");
             EndingScreenCredits = Content.Load<SpriteFont>("SpriteFont2");
             avatarFont = Content.Load<SpriteFont>("SpriteFont3");
-            ActionOptionsFont = Content.Load<SpriteFont>("SpriteFont4");
             ResponseFont = Content.Load<SpriteFont>("SpriteFont4");
+            ActionOptionsFont = Content.Load<SpriteFont>("SpriteFont4");
 
             /*
             *These are the textures for the avatars
@@ -185,13 +223,14 @@ namespace AdventureGame2
 
             girlWinGameoverBackgroundText = Content.Load<Texture2D>("MHGirlWin");
             boyWinGameoverBackgroundText = Content.Load<Texture2D>("MHGuyWin");
-            hallwayBackgroundText = Content.Load<Texture2D>("MHH");
+            //hallwayBackgroundText = Content.Load<Texture2D>("MHH");
             medicalWardBackgroundText = Content.Load<Texture2D>("MHMW");
             adminOfficeBackgroundText = Content.Load<Texture2D>("MHAO");
-            roomBackgroundText = Content.Load<Texture2D>("MHRoom");
+            //roomBackgroundText = Content.Load<Texture2D>("MHRoom");
             startingScreenBackgroundText = Content.Load<Texture2D>("outside of asylum");
             descriptionScreenBackgroundText = Content.Load<Texture2D>("Description Screen");
             AvatarSelectText = Content.Load<Texture2D>("Avatar Select Screen");
+            HelpScreenText = Content.Load<Texture2D>("Help Screen");
 
             /*
             *These are for the other graphics
@@ -199,6 +238,16 @@ namespace AdventureGame2
 
             startButtonText = Content.Load<Texture2D>("start button");
             startButtonText2 = Content.Load<Texture2D>("start button");
+            EffectBoxText = Content.Load<Texture2D>("EffectBox");
+            ChoiceBoxText = Content.Load<Texture2D>("ChoiceBox");
+            
+            /*
+             * Logic that controls the screeen changes
+             * 
+             */
+
+            GameScreenText = Content.Load<Texture2D>("MHRoom");
+
 
             // TODO: use this.Content to load your game content here
         }
@@ -284,6 +333,37 @@ namespace AdventureGame2
                         }
                     }
                 }
+                /*
+                 *This is the code that changes the game from screen to screen Let me explain what I did. 
+                 * 
+                 * The prompt is the effect box and the choice 1 and 2 and a possible 3, are the texts for the choices
+                 * 
+                 * The positions of the the blue rectangle boxes, AKA CBRect is fixed for the enitre game. 
+                 * Meaning they won't change from screen to screen, they have to stay where they are.
+                 * Same for the Pink Effect box.
+                 * 
+                 * To change the back ground screen I created a new Texture2D called GameScreen. 
+                 * What this will do is, for each mouse click on the Choice box, it will change the background,
+                 * so in the code down below, clicking on the "Run into storm choice" or CBRect1,
+                 * changes the screen Texture2D to the hallway.
+                 * the prompt and the Choice text should also change with each click as shown below.
+                 * 
+                 * Any quiestions, Text me and I'll try to explain.
+                 * 
+                 * */
+                if (screentype == Screen.Game)
+                {
+                     if((mouse.X > CBRect1.X && mouse.X < CBRect1.X + CBRect1.Width) &&
+                   (mouse.Y > CBRect1.Y && mouse.Y < CBRect1.Y + CBRect1.Height))
+                    {
+                        GameScreenText= Content.Load<Texture2D>("MHH");
+                        prompt = "You collide into a rampaging\npatient. They glare at \nyou with wild eyes";
+                        Choice1 = "\'Excuse Me.\'";
+                        Choice2 = "\'Fight Me!\'";
+
+                    }
+
+                }
             }
 
             if (Key.IsKeyDown(Keys.H) && screentype == Screen.Game)
@@ -339,6 +419,7 @@ namespace AdventureGame2
             */
             Vector2 textLocation1 = new Vector2(200, 50);
             Vector2 textLocation2 = new Vector2(550, 50);
+            Vector2 textLocation3 = new Vector2(260, 60);
 
             spriteBatch.Begin();
             if (screentype == Screen.Start)
@@ -353,7 +434,7 @@ namespace AdventureGame2
             }
             else if (screentype == Screen.Help)
             {
-                GraphicsDevice.Clear(color[0]);
+                spriteBatch.Draw(HelpScreenText, HelpScreenRect, Color.White);
             }
             else if (screentype == Screen.AvatarSelect)
             {
@@ -375,9 +456,15 @@ namespace AdventureGame2
             }
             else if (screentype == Screen.Game)
             {
-                spriteBatch.Draw(roomBackgroundText, roomBackgroundRect, Color.White);
-                spriteBatch.DrawString(ActionOptionsFont, "Run out into the storm!", new Vector2(125, 100), Color.White);
-                spriteBatch.DrawString(ActionOptionsFont, "Hide in your room!", new Vector2(525, 100), Color.White);
+                spriteBatch.Draw(GameScreenText, roomBackgroundRect, Color.White);
+                spriteBatch.Draw(EffectBoxText, EffectBoxRect, Color.White);
+                spriteBatch.DrawString(ResponseFont, prompt, textLocation3, Color.White);
+
+                spriteBatch.Draw(ChoiceBoxText, CBRect1, Color.White);
+                spriteBatch.DrawString(ActionOptionsFont, Choice1, new Vector2(130, 310), Color.White);
+
+                spriteBatch.Draw(ChoiceBoxText, CBRect2, Color.White);
+                spriteBatch.DrawString(ActionOptionsFont, Choice2, new Vector2(505, 330), Color.White);
             }
             else if (screentype == Screen.Losing)
             {

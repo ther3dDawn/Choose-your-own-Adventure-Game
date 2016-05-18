@@ -19,3 +19,7 @@ Content\nurse1.xnb
 Content\SpriteFont1.xnb
 Content\SpriteFont2.xnb
 Content\SpriteFont3.xnb
+Content\Help Screen.xnb
+Content\EffectBox.xnb
+Content\ChoiceBox.xnb
+Content\SpriteFont4.xnb
