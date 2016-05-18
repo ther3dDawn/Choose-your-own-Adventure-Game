@@ -165,6 +165,8 @@ namespace AdventureGame2
             EndingScreenFont = Content.Load<SpriteFont>("SpriteFont1");
             EndingScreenCredits = Content.Load<SpriteFont>("SpriteFont2");
             avatarFont = Content.Load<SpriteFont>("SpriteFont3");
+            ActionOptionsFont = Content.Load<SpriteFont>("SpriteFont4");
+            ResponseFont = Content.Load<SpriteFont>("SpriteFont4");
 
             /*
             *These are the textures for the avatars
@@ -374,6 +376,8 @@ namespace AdventureGame2
             else if (screentype == Screen.Game)
             {
                 spriteBatch.Draw(roomBackgroundText, roomBackgroundRect, Color.White);
+                spriteBatch.DrawString(ActionOptionsFont, "Run out into the storm!", new Vector2(125, 100), Color.White);
+                spriteBatch.DrawString(ActionOptionsFont, "Hide in your room!", new Vector2(525, 100), Color.White);
             }
             else if (screentype == Screen.Losing)
             {
