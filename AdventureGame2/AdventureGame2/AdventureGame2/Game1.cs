@@ -122,6 +122,7 @@ namespace AdventureGame2
 
         Rectangle CBRect1; //CB = Choice Box
         Rectangle CBRect2; //CB = Choice Box
+        Rectangle CBRect3; //CB = Choice Box
 
         Texture2D ChoiceBoxText;
         Rectangle EffectBoxRect;
@@ -362,7 +363,16 @@ namespace AdventureGame2
                         Choice2 = "\'Fight Me!\'";
 
                     }
-
+                    if ((mouse.X > CBRect2.X && mouse.X < CBRect2.X + CBRect1.Width) &&
+                        (mouse.Y > CBRect2.Y && mouse.Y < CBRect2.Y + CBRect1.Height))
+                    {
+                        prompt = "You remain in your room when \nthe door slams open and a \nbunch of nurses with tranquilizer \nguns come in.";
+                        Choice1 = "Hide under your bed";
+                        Choice2 = "\'What's Up?\'";
+                        Choice3 = "Scream and Kick them out";
+                        CBRect2.X = x + 250;
+                        CBRect3 = new Rectangle(x + 500, y, w, h);
+                    }
                 }
             }
 
@@ -465,6 +475,12 @@ namespace AdventureGame2
 
                 spriteBatch.Draw(ChoiceBoxText, CBRect2, Color.White);
                 spriteBatch.DrawString(ActionOptionsFont, Choice2, new Vector2(505, 330), Color.White);
+                
+                if (Choice3 != "")
+                {
+                    spriteBatch.Draw(ChoiceBoxText, CBRect3, Color.White);
+                    spriteBatch.DrawString(ActionOptionsFont, Choice3, new Vector2(605, 330), Color.White);
+                }
             }
             else if (screentype == Screen.Losing)
             {
