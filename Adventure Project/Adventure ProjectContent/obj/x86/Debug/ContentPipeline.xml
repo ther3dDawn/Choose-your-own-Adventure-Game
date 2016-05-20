@@ -1,0 +1,325 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<XnaContent xmlns:Pipeline="Microsoft.Xna.Framework.Content.Pipeline">
+  <Asset Type="Pipeline:BuildItemCollection">
+    <Item>
+      <Source>SpriteFont1.spritefont</Source>
+      <Name>SpriteFont1</Name>
+      <Importer>FontDescriptionImporter</Importer>
+      <Processor>FontDescriptionProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\160291\Desktop\Adventure Project\Adventure Project\Adventure Project\bin\x86\Debug\Content\SpriteFont1.xnb</Output>
+      <Time>2016-05-02T15:06:06.7751822-05:00</Time>
+    </Item>
+    <Item>
+      <Source>SpriteFont2.spritefont</Source>
+      <Name>SpriteFont2</Name>
+      <Importer>FontDescriptionImporter</Importer>
+      <Processor>FontDescriptionProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\160291\Desktop\Adventure Project\Adventure Project\Adventure Project\bin\x86\Debug\Content\SpriteFont2.xnb</Output>
+      <Time>2016-05-04T15:38:09.4103385-05:00</Time>
+    </Item>
+    <Item>
+      <Source>GirlPatient.png</Source>
+      <Name>GirlPatient</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\160291\Desktop\Adventure Project\Adventure Project\Adventure Project\bin\x86\Debug\Content\GirlPatient.xnb</Output>
+      <Time>2016-05-12T15:18:07.9332099-05:00</Time>
+    </Item>
+    <Item>
+      <Source>GirlAfterPatient.png</Source>
+      <Name>GirlAfterPatient</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\160291\Desktop\Adventure Project\Adventure Project\Adventure Project\bin\x86\Debug\Content\GirlAfterPatient.xnb</Output>
+      <Time>2016-05-12T15:21:28.5452691-05:00</Time>
+    </Item>
+    <Item>
+      <Source>BoyPatient.png</Source>
+      <Name>BoyPatient</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\160291\Desktop\Adventure Project\Adventure Project\Adventure Project\bin\x86\Debug\Content\BoyPatient.xnb</Output>
+      <Time>2016-05-04T15:31:52.6735549-05:00</Time>
+    </Item>
+    <Item>
+      <Source>BoyAfterPatient.png</Source>
+      <Name>BoyAfterPatient</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\160291\Desktop\Adventure Project\Adventure Project\Adventure Project\bin\x86\Debug\Content\BoyAfterPatient.xnb</Output>
+      <Time>2016-05-04T15:32:01.9244735-05:00</Time>
+    </Item>
+    <Item>
+      <Source>group of nurses.png</Source>
+      <Name>group of nurses</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\160291\Desktop\Adventure Project\Adventure Project\Adventure Project\bin\x86\Debug\Content\group of nurses.xnb</Output>
+      <Time>2016-05-06T15:05:14.3316429-05:00</Time>
+    </Item>
+    <Item>
+      <Source>nurse1.png</Source>
+      <Name>nurse1</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\160291\Desktop\Adventure Project\Adventure Project\Adventure Project\bin\x86\Debug\Content\nurse1.xnb</Output>
+      <Time>2016-05-06T15:05:27.6466429-05:00</Time>
+    </Item>
+    <Item>
+      <Source>MHAO.png</Source>
+      <Name>MHAO</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\160291\Desktop\Adventure Project\Adventure Project\Adventure Project\bin\x86\Debug\Content\MHAO.xnb</Output>
+      <Time>2016-05-06T15:11:48.7706429-05:00</Time>
+    </Item>
+    <Item>
+      <Source>MHGirlWin.png</Source>
+      <Name>MHGirlWin</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\160291\Desktop\Adventure Project\Adventure Project\Adventure Project\bin\x86\Debug\Content\MHGirlWin.xnb</Output>
+      <Time>2016-05-06T15:11:59.4476429-05:00</Time>
+    </Item>
+    <Item>
+      <Source>MHGuyWin.png</Source>
+      <Name>MHGuyWin</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\160291\Desktop\Adventure Project\Adventure Project\Adventure Project\bin\x86\Debug\Content\MHGuyWin.xnb</Output>
+      <Time>2016-05-06T15:12:09.7306429-05:00</Time>
+    </Item>
+    <Item>
+      <Source>MHH.png</Source>
+      <Name>MHH</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\160291\Desktop\Adventure Project\Adventure Project\Adventure Project\bin\x86\Debug\Content\MHH.xnb</Output>
+      <Time>2016-05-06T15:12:17.7536429-05:00</Time>
+    </Item>
+    <Item>
+      <Source>MHMW.png</Source>
+      <Name>MHMW</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\160291\Desktop\Adventure Project\Adventure Project\Adventure Project\bin\x86\Debug\Content\MHMW.xnb</Output>
+      <Time>2016-05-06T15:12:25.6746429-05:00</Time>
+    </Item>
+    <Item>
+      <Source>MHRoom.png</Source>
+      <Name>MHRoom</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\160291\Desktop\Adventure Project\Adventure Project\Adventure Project\bin\x86\Debug\Content\MHRoom.xnb</Output>
+      <Time>2016-05-06T15:12:35.3046429-05:00</Time>
+    </Item>
+    <Item>
+      <Source>outside of asylum.png</Source>
+      <Name>outside of asylum</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\160291\Desktop\Adventure Project\Adventure Project\Adventure Project\bin\x86\Debug\Content\outside of asylum.xnb</Output>
+      <Time>2016-05-06T16:10:27.3247367-05:00</Time>
+    </Item>
+    <Item>
+      <Source>Description Screen.png</Source>
+      <Name>Description Screen</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\160291\Desktop\Adventure Project\Adventure Project\Adventure Project\bin\x86\Debug\Content\Description Screen.xnb</Output>
+      <Time>2016-05-10T15:34:58.6295295-05:00</Time>
+    </Item>
+    <Item>
+      <Source>start button.png</Source>
+      <Name>start button</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\160291\Desktop\Adventure Project\Adventure Project\Adventure Project\bin\x86\Debug\Content\start button.xnb</Output>
+      <Time>2016-05-10T15:35:08.4033807-05:00</Time>
+    </Item>
+    <Item>
+      <Source>start button - Copy.png</Source>
+      <Name>start button - Copy</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\160291\Desktop\Adventure Project\Adventure Project\Adventure Project\bin\x86\Debug\Content\start button - Copy.xnb</Output>
+      <Time>2016-05-10T16:07:15.0814076-05:00</Time>
+    </Item>
+    <Item>
+      <Source>Avatar Select Screen.png</Source>
+      <Name>Avatar Select Screen</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\160291\Desktop\Adventure Project\Adventure Project\Adventure Project\bin\x86\Debug\Content\Avatar Select Screen.xnb</Output>
+      <Time>2016-05-12T15:15:18.5742757-05:00</Time>
+    </Item>
+    <Item>
+      <Source>SpriteFont3.spritefont</Source>
+      <Name>SpriteFont3</Name>
+      <Importer>FontDescriptionImporter</Importer>
+      <Processor>FontDescriptionProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\160291\Desktop\Adventure Project\Adventure Project\Adventure Project\bin\x86\Debug\Content\SpriteFont3.xnb</Output>
+      <Time>2016-05-12T15:30:12.7977188-05:00</Time>
+    </Item>
+    <Item>
+      <Source>play_again.png</Source>
+      <Name>play_again</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\160291\Desktop\Adventure Project\Adventure Project\Adventure Project\bin\x86\Debug\Content\play_again.xnb</Output>
+      <Time>2016-05-12T15:53:26.320777-05:00</Time>
+    </Item>
+    <Item>
+      <Source>SpriteFont4.spritefont</Source>
+      <Name>SpriteFont4</Name>
+      <Importer>FontDescriptionImporter</Importer>
+      <Processor>FontDescriptionProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\160291\Desktop\Adventure Project\Adventure Project\Adventure Project\bin\x86\Debug\Content\SpriteFont4.xnb</Output>
+      <Time>2016-05-18T15:07:26.2194799-05:00</Time>
+    </Item>
+    <Item>
+      <Source>Losing Screen.png</Source>
+      <Name>Losing Screen</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\160291\Desktop\Adventure Project\Adventure Project\Adventure Project\bin\x86\Debug\Content\Losing Screen.xnb</Output>
+      <Time>2016-05-18T15:21:44.6573104-05:00</Time>
+    </Item>
+    <Item>
+      <Source>green arrow.png</Source>
+      <Name>green arrow</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\160291\Desktop\Adventure Project\Adventure Project\Adventure Project\bin\x86\Debug\Content\green arrow.xnb</Output>
+      <Time>2016-05-18T15:24:58.8197247-05:00</Time>
+    </Item>
+    <Item>
+      <Source>ChoiceBox.png</Source>
+      <Name>ChoiceBox</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\160291\Desktop\Adventure Project\Adventure Project\Adventure Project\bin\x86\Debug\Content\ChoiceBox.xnb</Output>
+      <Time>2016-05-20T15:16:22.5227116-05:00</Time>
+    </Item>
+    <Item>
+      <Source>EffectBox.png</Source>
+      <Name>EffectBox</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\160291\Desktop\Adventure Project\Adventure Project\Adventure Project\bin\x86\Debug\Content\EffectBox.xnb</Output>
+      <Time>2016-05-20T15:16:30.5433154-05:00</Time>
+    </Item>
+    <Item>
+      <Source>Help Screen.png</Source>
+      <Name>Help Screen</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\160291\Desktop\Adventure Project\Adventure Project\Adventure Project\bin\x86\Debug\Content\Help Screen.xnb</Output>
+      <Time>2016-05-20T15:16:39.8421748-05:00</Time>
+    </Item>
+    <Item>
+      <Source>patient1.png</Source>
+      <Name>patient1</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\160291\Desktop\Adventure Project\Adventure Project\Adventure Project\bin\x86\Debug\Content\patient1.xnb</Output>
+      <Time>2016-05-20T15:36:10.4172107-05:00</Time>
+    </Item>
+    <Item>
+      <Source>question mark.png</Source>
+      <Name>question mark</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\160291\Desktop\Adventure Project\Adventure Project\Adventure Project\bin\x86\Debug\Content\question mark.xnb</Output>
+      <Time>2016-05-20T15:51:07.2256448-05:00</Time>
+    </Item>
+    <Item>
+      <Source>green arrow2.png</Source>
+      <Name>green arrow2</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\160291\Desktop\Adventure Project\Adventure Project\Adventure Project\bin\x86\Debug\Content\green arrow2.xnb</Output>
+      <Time>2016-05-20T16:09:28.0582332-05:00</Time>
+    </Item>
+    <Item>
+      <Source>SpriteFont5.spritefont</Source>
+      <Name>SpriteFont5</Name>
+      <Importer>FontDescriptionImporter</Importer>
+      <Processor>FontDescriptionProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\160291\Desktop\Adventure Project\Adventure Project\Adventure Project\bin\x86\Debug\Content\SpriteFont5.xnb</Output>
+      <Time>2016-05-20T16:17:10.7438034-05:00</Time>
+    </Item>
+    <BuildSuccessful>true</BuildSuccessful>
+    <Settings>
+      <TargetPlatform>Windows</TargetPlatform>
+      <TargetProfile>HiDef</TargetProfile>
+      <BuildConfiguration>Debug</BuildConfiguration>
+      <CompressContent>false</CompressContent>
+      <RootDirectory>C:\Users\160291\Desktop\Adventure Project\Adventure Project\Adventure ProjectContent\</RootDirectory>
+      <LoggerRootDirectory>C:\Users\160291\Desktop\Adventure Project\Adventure Project\Adventure Project\</LoggerRootDirectory>
+      <IntermediateDirectory>C:\Users\160291\Desktop\Adventure Project\Adventure Project\Adventure ProjectContent\obj\x86\Debug\</IntermediateDirectory>
+      <OutputDirectory>C:\Users\160291\Desktop\Adventure Project\Adventure Project\Adventure Project\bin\x86\Debug\Content\</OutputDirectory>
+    </Settings>
+    <Assemblies>
+      <Assembly>
+        <Key>C:\Program Files (x86)\Microsoft XNA\XNA Game Studio\v4.0\References\Windows\x86\Microsoft.Xna.Framework.Content.Pipeline.XImporter.dll</Key>
+        <Value>2010-08-23T12:41:18-05:00</Value>
+      </Assembly>
+      <Assembly>
+        <Key>C:\Program Files (x86)\Microsoft XNA\XNA Game Studio\v4.0\References\Windows\x86\Microsoft.Xna.Framework.Content.Pipeline.VideoImporters.dll</Key>
+        <Value>2010-08-23T12:41:18-05:00</Value>
+      </Assembly>
+      <Assembly>
+        <Key>C:\Program Files (x86)\Microsoft XNA\XNA Game Studio\v4.0\References\Windows\x86\Microsoft.Xna.Framework.Content.Pipeline.TextureImporter.dll</Key>
+        <Value>2010-08-23T12:41:18-05:00</Value>
+      </Assembly>
+      <Assembly>
+        <Key>C:\Program Files (x86)\Microsoft XNA\XNA Game Studio\v4.0\References\Windows\x86\Microsoft.Xna.Framework.Content.Pipeline.FBXImporter.dll</Key>
+        <Value>2010-08-23T12:41:18-05:00</Value>
+      </Assembly>
+      <Assembly>
+        <Key>C:\Program Files (x86)\Microsoft XNA\XNA Game Studio\v4.0\References\Windows\x86\Microsoft.Xna.Framework.Content.Pipeline.EffectImporter.dll</Key>
+        <Value>2010-08-23T12:41:18-05:00</Value>
+      </Assembly>
+      <Assembly>
+        <Key>C:\Program Files (x86)\Microsoft XNA\XNA Game Studio\v4.0\References\Windows\x86\Microsoft.Xna.Framework.Content.Pipeline.AudioImporters.dll</Key>
+        <Value>2010-08-23T12:41:18-05:00</Value>
+      </Assembly>
+      <Assembly>
+        <Key>C:\Windows\Microsoft.Net\assembly\GAC_32\Microsoft.Xna.Framework.Content.Pipeline\v4.0_4.0.0.0__842cf8be1de50553\Microsoft.Xna.Framework.Content.Pipeline.dll</Key>
+        <Value>2015-04-29T07:56:17.6113824-05:00</Value>
+      </Assembly>
+    </Assemblies>
+  </Asset>
+</XnaContent>

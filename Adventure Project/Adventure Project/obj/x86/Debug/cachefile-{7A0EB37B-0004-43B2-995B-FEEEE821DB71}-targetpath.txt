@@ -1,0 +1,31 @@
+Content\SpriteFont1.xnb
+Content\SpriteFont2.xnb
+Content\GirlPatient.xnb
+Content\GirlAfterPatient.xnb
+Content\BoyPatient.xnb
+Content\BoyAfterPatient.xnb
+Content\group of nurses.xnb
+Content\nurse1.xnb
+Content\MHAO.xnb
+Content\MHGirlWin.xnb
+Content\MHGuyWin.xnb
+Content\MHH.xnb
+Content\MHMW.xnb
+Content\MHRoom.xnb
+Content\outside of asylum.xnb
+Content\Description Screen.xnb
+Content\start button.xnb
+Content\start button - Copy.xnb
+Content\Avatar Select Screen.xnb
+Content\SpriteFont3.xnb
+Content\play_again.xnb
+Content\SpriteFont4.xnb
+Content\Losing Screen.xnb
+Content\green arrow.xnb
+Content\ChoiceBox.xnb
+Content\EffectBox.xnb
+Content\Help Screen.xnb
+Content\patient1.xnb
+Content\question mark.xnb
+Content\green arrow2.xnb
+Content\SpriteFont5.xnb

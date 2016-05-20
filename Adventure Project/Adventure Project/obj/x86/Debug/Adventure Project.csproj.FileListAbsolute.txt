@@ -1,0 +1,37 @@
+C:\Users\160291\Desktop\Adventure Project\Adventure Project\Adventure Project\obj\x86\Debug\Adventure Project.csprojResolveAssemblyReference.cache
+C:\Users\160291\Desktop\Adventure Project\Adventure Project\Adventure Project\obj\x86\Debug\Microsoft.Xna.Framework.RuntimeProfile.txt
+C:\Users\160291\Desktop\Adventure Project\Adventure Project\Adventure Project\bin\x86\Debug\Adventure Project.exe
+C:\Users\160291\Desktop\Adventure Project\Adventure Project\Adventure Project\bin\x86\Debug\Adventure Project.pdb
+C:\Users\160291\Desktop\Adventure Project\Adventure Project\Adventure Project\obj\x86\Debug\Adventure Project.exe
+C:\Users\160291\Desktop\Adventure Project\Adventure Project\Adventure Project\obj\x86\Debug\Adventure Project.pdb
+C:\Users\160291\Desktop\Adventure Project\Adventure Project\Adventure Project\bin\x86\Debug\Content\SpriteFont1.xnb
+C:\Users\160291\Desktop\Adventure Project\Adventure Project\Adventure Project\bin\x86\Debug\Content\SpriteFont2.xnb
+C:\Users\160291\Desktop\Adventure Project\Adventure Project\Adventure Project\bin\x86\Debug\Content\GirlPatient.xnb
+C:\Users\160291\Desktop\Adventure Project\Adventure Project\Adventure Project\bin\x86\Debug\Content\GirlAfterPatient.xnb
+C:\Users\160291\Desktop\Adventure Project\Adventure Project\Adventure Project\bin\x86\Debug\Content\BoyPatient.xnb
+C:\Users\160291\Desktop\Adventure Project\Adventure Project\Adventure Project\bin\x86\Debug\Content\BoyAfterPatient.xnb
+C:\Users\160291\Desktop\Adventure Project\Adventure Project\Adventure Project\bin\x86\Debug\Content\group of nurses.xnb
+C:\Users\160291\Desktop\Adventure Project\Adventure Project\Adventure Project\bin\x86\Debug\Content\nurse1.xnb
+C:\Users\160291\Desktop\Adventure Project\Adventure Project\Adventure Project\bin\x86\Debug\Content\MHAO.xnb
+C:\Users\160291\Desktop\Adventure Project\Adventure Project\Adventure Project\bin\x86\Debug\Content\MHGirlWin.xnb
+C:\Users\160291\Desktop\Adventure Project\Adventure Project\Adventure Project\bin\x86\Debug\Content\MHGuyWin.xnb
+C:\Users\160291\Desktop\Adventure Project\Adventure Project\Adventure Project\bin\x86\Debug\Content\MHH.xnb
+C:\Users\160291\Desktop\Adventure Project\Adventure Project\Adventure Project\bin\x86\Debug\Content\MHMW.xnb
+C:\Users\160291\Desktop\Adventure Project\Adventure Project\Adventure Project\bin\x86\Debug\Content\MHRoom.xnb
+C:\Users\160291\Desktop\Adventure Project\Adventure Project\Adventure Project\bin\x86\Debug\Content\outside of asylum.xnb
+C:\Users\160291\Desktop\Adventure Project\Adventure Project\Adventure Project\bin\x86\Debug\Content\Description Screen.xnb
+C:\Users\160291\Desktop\Adventure Project\Adventure Project\Adventure Project\bin\x86\Debug\Content\start button.xnb
+C:\Users\160291\Desktop\Adventure Project\Adventure Project\Adventure Project\bin\x86\Debug\Content\start button - Copy.xnb
+C:\Users\160291\Desktop\Adventure Project\Adventure Project\Adventure Project\bin\x86\Debug\Content\Avatar Select Screen.xnb
+C:\Users\160291\Desktop\Adventure Project\Adventure Project\Adventure Project\bin\x86\Debug\Content\SpriteFont3.xnb
+C:\Users\160291\Desktop\Adventure Project\Adventure Project\Adventure Project\bin\x86\Debug\Content\play_again.xnb
+C:\Users\160291\Desktop\Adventure Project\Adventure Project\Adventure Project\bin\x86\Debug\Content\SpriteFont4.xnb
+C:\Users\160291\Desktop\Adventure Project\Adventure Project\Adventure Project\bin\x86\Debug\Content\Losing Screen.xnb
+C:\Users\160291\Desktop\Adventure Project\Adventure Project\Adventure Project\bin\x86\Debug\Content\green arrow.xnb
+C:\Users\160291\Desktop\Adventure Project\Adventure Project\Adventure Project\bin\x86\Debug\Content\ChoiceBox.xnb
+C:\Users\160291\Desktop\Adventure Project\Adventure Project\Adventure Project\bin\x86\Debug\Content\EffectBox.xnb
+C:\Users\160291\Desktop\Adventure Project\Adventure Project\Adventure Project\bin\x86\Debug\Content\Help Screen.xnb
+C:\Users\160291\Desktop\Adventure Project\Adventure Project\Adventure Project\bin\x86\Debug\Content\patient1.xnb
+C:\Users\160291\Desktop\Adventure Project\Adventure Project\Adventure Project\bin\x86\Debug\Content\question mark.xnb
+C:\Users\160291\Desktop\Adventure Project\Adventure Project\Adventure Project\bin\x86\Debug\Content\green arrow2.xnb
+C:\Users\160291\Desktop\Adventure Project\Adventure Project\Adventure Project\bin\x86\Debug\Content\SpriteFont5.xnb
