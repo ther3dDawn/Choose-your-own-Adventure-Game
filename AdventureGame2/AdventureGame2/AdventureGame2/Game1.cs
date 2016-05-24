@@ -360,30 +360,30 @@ namespace AdventureGame2
                  * Any quiestions, Text me and I'll try to explain.
                  * 
                  * */
-                if (screentype == Screen.Game)
-                {
-                    if (CBRect1.Contains(mouse.X, mouse.Y))
+                if (choicePath.Count() == 0)
                     {
-                        GameScreenText = Content.Load<Texture2D>("MHH");
-                        prompt = "You collide into a rampaging patient. They glare at you with wild eyes";
-                        Choice1 = "\'Excuse Me.\'";
-                        Choice2 = "\'Fight Me!\'";
+                        if (CBRect1.Contains(mouse.X, mouse.Y))
+                        {
+                            GameScreenText = Content.Load<Texture2D>("MHH");
+                            prompt = "You collide into a rampaging patient. They glare at you with wild eyes";
+                            Choice1 = "\'Excuse Me.\'";
+                            Choice2 = "\'Fight Me!\'";
+                            choicePath.Add(1);
+                        }
+                        if (CBRect2.Contains(mouse.X, mouse.Y))
+                        {
+                            prompt = "You remain in your room when the door slams open and a bunch of nurses with\ntranquilizer guns come in.";
+                            Choice1 = "Hide under your bed";
+                            Choice2 = "Scream and\nKick them out";
+                            Choice3 = " \'What's Up?\' ";
+                            choicePath.Add(2);
+                        }
 
+                        // if "Excuse Me."
+                        //prompt = "\'It's alright sugar bun!\' They smile and kiss you unexpectedly. You leave, where are \nyou going?";
+                        //Choice1 = "Medical Ward";
+                        //Choice2 = "Administration Office";
                     }
-                    if (CBRect2.Contains(mouse.X, mouse.Y))
-                    {
-                        prompt = "You remain in your room when the door slams open and a bunch of nurses with\ntranquilizer guns come in.";
-                        Choice1 = "Hide under your bed";
-                        Choice2 = "Scream and\nKick them out";
-                        Choice3 = " \'What's Up?\' ";
-                        
-                    }
-                    
-                    // if "Excuse Me."
-                    //prompt = "\'It's alright sugar bun!\' They smile and kiss you unexpectedly. You leave, where are \nyou going?";
-                    //Choice1 = "Medical Ward";
-                    //Choice2 = "Administration Office";
-                }
             }
 
             if (Key.IsKeyDown(Keys.H) && screentype == Screen.Game)
