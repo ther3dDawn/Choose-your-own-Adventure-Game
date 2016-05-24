@@ -360,8 +360,7 @@ namespace AdventureGame2
                  * */
                 if (screentype == Screen.Game)
                 {
-                    if ((mouse.X > CBRect1.X && mouse.X < CBRect1.X + CBRect1.Width) &&
-                  (mouse.Y > CBRect1.Y && mouse.Y < CBRect1.Y + CBRect1.Height))
+                    if (CBRect1.Contains(mouse.X, mouse.Y))
                     {
                         GameScreenText = Content.Load<Texture2D>("MHH");
                         prompt = "You collide into a rampaging patient. They glare at you with wild eyes";
@@ -369,8 +368,7 @@ namespace AdventureGame2
                         Choice2 = "\'Fight Me!\'";
 
                     }
-                    if ((mouse.X > CBRect2.X && mouse.X < CBRect2.X + CBRect1.Width) &&
-                        (mouse.Y > CBRect2.Y && mouse.Y < CBRect2.Y + CBRect1.Height))
+                    if (CBRect2.Contains(mouse.X, mouse.Y))
                     {
                         prompt = "You remain in your room when the door slams open and a bunch of nurses with\ntranquilizer guns come in.";
                         Choice1 = "Hide under your bed";
