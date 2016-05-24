@@ -244,16 +244,12 @@ namespace AdventureGame2
             if (mouse.LeftButton == ButtonState.Pressed
                 && oldMouse.LeftButton == ButtonState.Released)
             {
-                if (screentype == Screen.Start &&
-                   (mouse.X > startButtonRect.X && mouse.X < (startButtonRect.X + startButtonRect.Width)) &&
-                   (mouse.Y > startButtonRect.Y && mouse.Y < (startButtonRect.Y + startButtonRect.Height)))
+                if (screentype == Screen.Start && startButtonRect.Contains(mouse.X, mouse.Y))
                 {
                     screentype = Screen.Describe;
                 }
 
-                if (screentype == Screen.Describe &&
-                   (mouse.X > startButtonRect2.X && mouse.X < (startButtonRect2.X + startButtonRect2.Width)) &&
-                   (mouse.Y > startButtonRect2.Y && mouse.Y < (startButtonRect2.Y + startButtonRect2.Height)))
+                if (screentype == Screen.Describe && startButtonRect2.Contains(mouse.X, mouse.Y))
                 {
                     screentype = Screen.AvatarSelect;
                 }
@@ -263,21 +259,17 @@ namespace AdventureGame2
                     if (mouse.LeftButton == ButtonState.Pressed
                         && oldMouse.LeftButton == ButtonState.Released)
                     {
-                        if ((mouse.X > girlBeforeRect.X && mouse.X < girlBeforeRect.X + girlBeforeRect.Width) &&
-                        (mouse.Y > girlBeforeRect.Y && mouse.Y < girlBeforeRect.Y + girlBeforeRect.Height) || (mouse.X > boyBeforeRect.X && mouse.X < boyBeforeRect.X + boyBeforeRect.Width) &&
-                        (mouse.Y > boyBeforeRect.Y && mouse.Y < boyBeforeRect.Y + boyBeforeRect.Height))
+                        if (girlBeforeRect.Contains(mouse.X, mouse.Y) || boyBeforeRect.Contains(mouse.X, mouse.Y))
                         {
                             screentype = Screen.Game;
                         }
                         // Decides which Gameover Screen you get
-                        if ((mouse.X > girlBeforeRect.X && mouse.X < girlBeforeRect.X + girlBeforeRect.Width) &&
-                       (mouse.Y > girlBeforeRect.Y && mouse.Y < girlBeforeRect.Y + girlBeforeRect.Height))
+                        if (girlBeforeRect.Contains(mouse.X, mouse.Y)) 
                         {
                             VictoryScreenRect = girlWinGameoverBackgroundRect;
                             VictoryScreenText = girlWinGameoverBackgroundText;
                         }
-                        if ((mouse.X > boyBeforeRect.X && mouse.X < boyBeforeRect.X + boyBeforeRect.Width) &&
-                       (mouse.Y > boyBeforeRect.Y && mouse.Y < boyBeforeRect.Y + boyBeforeRect.Height))
+                        if (boyBeforeRect.Contains(mouse.X, mouse.Y))
                         {
                             VictoryScreenRect = boyWinGameoverBackgroundRect;
                             VictoryScreenText = boyWinGameoverBackgroundText;
