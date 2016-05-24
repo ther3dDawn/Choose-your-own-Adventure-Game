@@ -140,6 +140,8 @@ namespace AdventureGame2
         string Choice3;
 
         string prompt;//effect text
+        
+        List<int> choicePath;
 
         public Game1()
         {
@@ -185,7 +187,7 @@ namespace AdventureGame2
             CBRect6 = new Rectangle(x + 300, y, w, h);
             CBRect7 = new Rectangle(x + 580, y, w, h);
  
-            
+            choicePath = new List<int>();
             
 
 
