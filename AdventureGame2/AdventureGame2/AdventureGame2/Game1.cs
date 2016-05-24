@@ -386,6 +386,11 @@ namespace AdventureGame2
                         Choice3 = " \'What's Up?\' ";
                         
                     }
+                    
+                    // if "Excuse Me."
+                    //prompt = "\'It's alright sugar bun!\' They smile and kiss you unexpectedly. You leave, where are \nyou going?";
+                    //Choice1 = "Medical Ward";
+                    //Choice2 = "Administration Office";
                 }
             }
 
@@ -442,7 +447,7 @@ namespace AdventureGame2
             */
             Vector2 textLocation1 = new Vector2(200, 50);
             Vector2 textLocation2 = new Vector2(550, 50);
-            Vector2 textLocation3 = new Vector2(20, 20);
+            Vector2 textLocation3 = new Vector2(20, 0);
 
             spriteBatch.Begin();
             if (screentype == Screen.Start)
@@ -492,14 +497,14 @@ namespace AdventureGame2
                 spriteBatch.DrawString(ActionOptionsFont, Choice1, new Vector2(20, 405), Color.White);
 
                 spriteBatch.Draw(ChoiceBoxText, CBRect2, Color.White);
-                spriteBatch.DrawString(ActionOptionsFont, Choice2, new Vector2(620, 425), Color.White);
+                spriteBatch.DrawString(ActionOptionsFont, Choice2, new Vector2(600, 405), Color.White);
 
                 /**
                  * Hide under Bed Screen
                  * 
-                 * */
+                
               
-
+                
                 spriteBatch.Draw(ChoiceBoxText, CBRect5, Color.White);
                 spriteBatch.DrawString(ActionOptionsFont, Choice1, new Vector2(20, 405), Color.White);
 
@@ -510,9 +515,9 @@ namespace AdventureGame2
                 }
 
 
-                    spriteBatch.Draw(ChoiceBoxText, CBRect7, Color.White);
-                    spriteBatch.DrawString(ActionOptionsFont, Choice3, new Vector2(350, 405), Color.White);
-                
+                spriteBatch.Draw(ChoiceBoxText, CBRect7, Color.White);
+                spriteBatch.DrawString(ActionOptionsFont, Choice3, new Vector2(350, 405), Color.White);
+                */
                 
             }
             else if (screentype == Screen.Losing)
