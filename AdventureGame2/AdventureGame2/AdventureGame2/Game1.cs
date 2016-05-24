@@ -384,10 +384,10 @@ namespace AdventureGame2
                         //Choice1 = "Medical Ward";
                         //Choice2 = "Administration Office";
                     }
-                    else if(choicePath.length == 1)
-                    {
-                        
-                    }
+                    //else if(choicePath.length == 1)
+                    //{
+                    //
+                    //}
             }
             
 
