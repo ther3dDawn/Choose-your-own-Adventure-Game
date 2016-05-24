@@ -141,7 +141,7 @@ namespace AdventureGame2
 
         string prompt;//effect text
         
-        List<int> choicePath;
+        String choicePath;
 
         public Game1()
         {
@@ -187,7 +187,7 @@ namespace AdventureGame2
             CBRect6 = new Rectangle(x + 300, y, w, h);
             CBRect7 = new Rectangle(x + 580, y, w, h);
  
-            choicePath = new List<int>();
+            choicePath = new String;
             
 
 
@@ -360,7 +360,7 @@ namespace AdventureGame2
                  * Any quiestions, Text me and I'll try to explain.
                  * 
                  * */
-                if (choicePath.Count() == 0)
+                if (choicePath.length == 0)
                     {
                         if (CBRect1.Contains(mouse.X, mouse.Y))
                         {
@@ -368,7 +368,7 @@ namespace AdventureGame2
                             prompt = "You collide into a rampaging patient. They glare at you with wild eyes";
                             Choice1 = "\'Excuse Me.\'";
                             Choice2 = "\'Fight Me!\'";
-                            choicePath.Add(1);
+                            choicePath = "1";
                         }
                         if (CBRect2.Contains(mouse.X, mouse.Y))
                         {
@@ -376,7 +376,7 @@ namespace AdventureGame2
                             Choice1 = "Hide under your bed";
                             Choice2 = "Scream and\nKick them out";
                             Choice3 = " \'What's Up?\' ";
-                            choicePath.Add(2);
+                            choicePath = "2";
                         }
 
                         // if "Excuse Me."
@@ -384,7 +384,12 @@ namespace AdventureGame2
                         //Choice1 = "Medical Ward";
                         //Choice2 = "Administration Office";
                     }
+                    else if(choicePath.length == 1)
+                    {
+                        
+                    }
             }
+            
 
             if (Key.IsKeyDown(Keys.H) && screentype == Screen.Game)
             {
