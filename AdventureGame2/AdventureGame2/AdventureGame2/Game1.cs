@@ -9,7 +9,7 @@ using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
 using Microsoft.Xna.Framework.Media;
 
-namespace AdventureGame2
+namespace AdventureGame
 {
     /// <summary>
     /// This is the main type for your game
@@ -33,9 +33,8 @@ namespace AdventureGame2
         GraphicsDeviceManager graphics;
         SpriteBatch spriteBatch;
         Screen screentype = Screen.Start;
-        Screen oldscreentype;
         MouseState oldMouse = Mouse.GetState();
-        Color[] color = new Color[2] { Color.Black, Color.Purple };
+        Color color = Color.Purple;
         string[] endingCredits = new string[6] { "Congratulations you escaped!", "Created by:", "Dani Alvarez",
             "Duncan Hadley", "Nathan Johnson", "Ezinne Megwa" };
 
@@ -44,13 +43,14 @@ namespace AdventureGame2
         SpriteFont avatarFont;
         SpriteFont ActionOptionsFont; // Choices you have; blue boxes on CYOA Level Map
         SpriteFont ResponseFont; // Effect of your action; pink boxes on CYOA Level Map
+        SpriteFont playAgainFont;
 
         int screenWidth;
         int screenHeight;
 
         /*
-        *These are the avatars
-        */
+       *These are the avatars
+       */
 
         Rectangle boyBeforeRect;
         Texture2D BoyBeforeText;
@@ -70,6 +70,9 @@ namespace AdventureGame2
 
         Rectangle nurseMedWardRect;
         Texture2D nurseMedWardText;
+
+        Rectangle angryPatientRect;
+        Texture2D angryPatientText;
 
         /*
         *These are the backgrounds
@@ -105,8 +108,14 @@ namespace AdventureGame2
         Rectangle VictoryScreenRect;
         Texture2D VictoryScreenText;
 
+        Rectangle losingScreenRect;
+        Texture2D losingScreenText;
+
+        Rectangle HelpScreenRect;
+        Texture2D HelpScreenText;
+
         /*
-        * Other graphics
+         * Other graphics
         */
 
         Rectangle startButtonRect;
@@ -115,11 +124,49 @@ namespace AdventureGame2
         Rectangle startButtonRect2;
         Texture2D startButtonText2;
 
+        Rectangle playAgainArrowRect;
+        Texture2D playAgainArrowText;
+
+        Rectangle questionMarkRect;
+        Texture2D questionMarkText;
+
+        Rectangle playAgainArrow2Rect;
+        Texture2D playAgainArrow2Text;
+
+        Texture2D GameScreenText;
+
+        /*
+         * This is for the levels
+         */
+
+        Rectangle CBRect1; //CB = Choice Box
+        Rectangle CBRect2; //CB = Choice Box
+        Rectangle CBRect3; //CB = Choice Box
+        Rectangle CBRect4; //CB = Choice Box
+        Rectangle CBRect5; //CB = Choice Box
+        Rectangle CBRect6; //CB = Choice Box
+        Rectangle CBRect7; //CB = Choice Box
+        Rectangle CBRect8; //CB = Choice Box
+        Rectangle CBRect9; //CB = Choice Box
+
+        Texture2D ChoiceBoxText;
+        Rectangle EffectBoxRect;
+        Texture2D EffectBoxText;
+
+        int x, y, w, h; //CB positions
+        string Choice1; //choice text
+        string Choice2;
+        string Choice3;
+
+        string prompt; //Effect text
+
+        String choicePath;
 
         public Game1()
         {
             graphics = new GraphicsDeviceManager(this);
             Content.RootDirectory = "Content";
+            
         }
 
         /// <summary>
@@ -143,13 +190,42 @@ namespace AdventureGame2
             startingScreenBackgroundRect = new Rectangle(0, 0, screenWidth, screenHeight);
             descriptionScreenBackgroundRect = new Rectangle(0, 0, screenWidth, screenHeight);
             AvatarSelectScreenRect = new Rectangle(0, 0, screenWidth, screenHeight);
+            losingScreenRect = new Rectangle(0, 0, screenWidth, screenHeight);
+            HelpScreenRect = new Rectangle(0, 0, screenWidth, screenHeight);
 
             /*
-            *These are for the other graphics
+             * These are for the other graphics
             */
 
             startButtonRect = new Rectangle(380, 390, 50, 50);
             startButtonRect2 = new Rectangle(675, 400, 50, 50);
+            playAgainArrowRect = new Rectangle(650, 400, 100, 50);
+            questionMarkRect = new Rectangle(750, 90, 50, 50);
+            playAgainArrow2Rect = new Rectangle(50, 400, 100, 50);
+
+            /*
+             * This is for the levels
+             */
+
+            EffectBoxRect = new Rectangle(10, 0, 780, 75);
+
+            x = 10;
+            y = 400;
+            w = 200;
+            h = 70;
+
+            CBRect1 = new Rectangle(x, y, w, h);
+            CBRect2 = new Rectangle(x + 580, y, w, h);
+            CBRect3 = new Rectangle(x + 290, y, w, h);
+            CBRect4 = new Rectangle(x + 580, y, w, h);
+            CBRect5 = new Rectangle(x, y, w, h);
+            CBRect6 = new Rectangle(x + 300, y, w, h);
+            CBRect7 = new Rectangle(x + 580, y, w, h);
+
+            prompt = "You are getting ready to leave when the asylum breaks out into chaos!";
+            Choice1 = "Run out into the \nstorm!";
+            Choice2 = "Hide in your room!";
+            Choice3 = "";
 
             base.Initialize();
         }
@@ -165,8 +241,9 @@ namespace AdventureGame2
             EndingScreenFont = Content.Load<SpriteFont>("SpriteFont1");
             EndingScreenCredits = Content.Load<SpriteFont>("SpriteFont2");
             avatarFont = Content.Load<SpriteFont>("SpriteFont3");
-            ActionOptionsFont = Content.Load<SpriteFont>("SpriteFont4");
             ResponseFont = Content.Load<SpriteFont>("SpriteFont4");
+            ActionOptionsFont = Content.Load<SpriteFont>("SpriteFont4");
+            playAgainFont = Content.Load<SpriteFont>("SpriteFont5");
 
             /*
             *These are the textures for the avatars
@@ -178,27 +255,43 @@ namespace AdventureGame2
             girlAfterText = Content.Load<Texture2D>("GirlAfterPatient");
             nurseGroupText = Content.Load<Texture2D>("group of nurses");
             nurseText = Content.Load<Texture2D>("nurse1");
+            angryPatientText = Content.Load<Texture2D>("patient1");
 
             /*
             *These are the textures for the backgrounds
             */
 
             girlWinGameoverBackgroundText = Content.Load<Texture2D>("MHGirlWin");
-            boyWinGameoverBackgroundText = Content.Load<Texture2D>("MHGuyWin");
-            hallwayBackgroundText = Content.Load<Texture2D>("MHH");
+            boyWinGameoverBackgroundText = Content.Load<Texture2D>("MHGuyWin"); 
+            //hallwayBackgroundText = Content.Load<Texture2D>("MHH");
             medicalWardBackgroundText = Content.Load<Texture2D>("MHMW");
             adminOfficeBackgroundText = Content.Load<Texture2D>("MHAO");
-            roomBackgroundText = Content.Load<Texture2D>("MHRoom");
+            //roomBackgroundText = Content.Load<Texture2D>("MHRoom");
             startingScreenBackgroundText = Content.Load<Texture2D>("outside of asylum");
             descriptionScreenBackgroundText = Content.Load<Texture2D>("Description Screen");
             AvatarSelectText = Content.Load<Texture2D>("Avatar Select Screen");
+            losingScreenText = Content.Load<Texture2D>("Losing Screen");
+            HelpScreenText = Content.Load<Texture2D>("Help Screen");
 
             /*
-            *These are for the other graphics
+            * These are for the other graphics
             */
 
             startButtonText = Content.Load<Texture2D>("start button");
             startButtonText2 = Content.Load<Texture2D>("start button");
+            EffectBoxText = Content.Load<Texture2D>("EffectBox");
+            ChoiceBoxText = Content.Load<Texture2D>("ChoiceBox");
+            playAgainArrowText = Content.Load<Texture2D>("green arrow");
+            questionMarkText = Content.Load<Texture2D>("question mark");
+            playAgainArrow2Text = Content.Load<Texture2D>("green arrow2");
+
+            /*
+             * Logic that controls the screen changes
+             * 
+             */
+
+            GameScreenText = Content.Load<Texture2D>("MHRoom");
+
 
             // TODO: use this.Content to load your game content here
         }
@@ -239,7 +332,7 @@ namespace AdventureGame2
              * 'L' button from the Game Screen takes you to the Losing Screen
             */
 
-            //The Start to Game Screen will go from the Start to the first Game Screen the AvatarSelect
+            // The Start to Game Screen will go from the Start to the first Game Screen the AvatarSelect
 
             if (mouse.LeftButton == ButtonState.Pressed
                 && oldMouse.LeftButton == ButtonState.Released)
@@ -249,12 +342,12 @@ namespace AdventureGame2
                     screentype = Screen.Describe;
                 }
 
-                if (screentype == Screen.Describe && startButtonRect2.Contains(mouse.X, mouse.Y))
+                else if (screentype == Screen.Describe && startButtonRect2.Contains(mouse.X, mouse.Y))
                 {
                     screentype = Screen.AvatarSelect;
                 }
 
-                if (screentype == Screen.AvatarSelect)
+                else if (screentype == Screen.AvatarSelect)
                 {
                     if (mouse.LeftButton == ButtonState.Pressed
                         && oldMouse.LeftButton == ButtonState.Released)
@@ -263,8 +356,7 @@ namespace AdventureGame2
                         {
                             screentype = Screen.Game;
                         }
-                        // Decides which Gameover Screen you get
-                        if (girlBeforeRect.Contains(mouse.X, mouse.Y)) 
+                        if (girlBeforeRect.Contains(mouse.X, mouse.Y))
                         {
                             VictoryScreenRect = girlWinGameoverBackgroundRect;
                             VictoryScreenText = girlWinGameoverBackgroundText;
@@ -276,25 +368,72 @@ namespace AdventureGame2
                         }
                     }
                 }
+
+                /*
+                 * This is the code that changes the game from screen to screen. Let me explain what I did.
+                 * 
+                 * The prompt is the effect box and the choice 1 and 2 and a possible 3, are the texts for the choices
+                 * 
+                 * The positions of the blue rectangle boxes, AKA CBRect, is fixed for the entire game.
+                 * Meaning they won't change from screen to screen, they have to stay where they are.
+                 * Same for the Pink Effect box.
+                 * 
+                 * To change the background screen I created a new Texture2D called GameScreen.
+                 * What this will do is, for each mouse click on the Choice box, it will change the background,
+                 * so in the code down below, clicking on the "Run into the storm choice" or CBRect1,
+                 * changes the screen Texture2D to the hallway.
+                 * the prompt and the Choice text should also change with each click as shown below.
+                 * 
+                 */
+                if (screentype == Screen.Game)
+                {
+                    if (CBRect1.Contains(mouse.X, mouse.Y))
+                    {
+                        GameScreenText = Content.Load<Texture2D>("MHH");
+                        prompt = "You collide into a rampaging patient. They glare at you with wild eyes";
+                        Choice1 = "\'Excuse Me.\'";
+                        Choice2 = "\'Fight Me!\'";
+                    }
+                    if (CBRect2.Contains(mouse.X, mouse.Y))
+                    {
+                        prompt = "You remain in your room when the door slams open and a bunch of nurses with \ntranquilizer guns come in.";
+                        Choice1 = "Hide under your bed";
+                        Choice2 = "\'What's Up?\'";
+                        Choice3 = "Scream and Kick \nthem out";
+                    }
+
+                    if (questionMarkRect.Contains(mouse.X, mouse.Y))
+                    {
+                         screentype = Screen.Help;
+                    }
+
+                    // if "Excuse Me."
+                    //prompt = "\'It's alright sugar bun!\' They smile and kiss you unexpectedly. You leave, where are \nyou going?";
+                    //Choice1 = "Medical Ward";
+                    //Choice2 = "Administration Office"
+                }
             }
 
-            if (Key.IsKeyDown(Keys.H) && screentype == Screen.Game)
+            else if (screentype == Screen.Losing)
             {
-                oldscreentype = Screen.Game;
-                screentype = Screen.Help;
+                if (playAgainArrowRect.Contains(mouse.X, mouse.Y))
+                {
+                    screentype = Screen.Start;
+                }
             }
-            else if (Key.IsKeyDown(Keys.B) && screentype == Screen.Help && oldscreentype == Screen.Game)
+            else if (screentype == Screen.Help)
             {
-                screentype = Screen.Game;
+                if (playAgainArrowRect.Contains(mouse.X, mouse.Y))
+                {
+                    screentype = Screen.Game;
+                }
             }
-
-            if (Key.IsKeyDown(Keys.H) && screentype == Screen.Start)
+            else if (screentype == Screen.Gameover)
             {
-                screentype = Screen.Help;
-            }
-            else if (Key.IsKeyDown(Keys.B) && screentype == Screen.Help)
-            {
-                screentype = Screen.Start;
+                if (playAgainArrow2Rect.Contains(mouse.X, mouse.Y))
+                {
+                    screentype = Screen.Start;
+                }
             }
 
             if (Key.IsKeyDown(Keys.G) && screentype == Screen.Game)
@@ -302,12 +441,7 @@ namespace AdventureGame2
                 screentype = Screen.Gameover;
             }
 
-            if (Key.IsKeyDown(Keys.S) && screentype == Screen.Gameover)
-            {
-                screentype = Screen.Start;
-            }
-
-            if (Key.IsKeyDown(Keys.L) && screentype == Screen.Game)
+            else if (Key.IsKeyDown(Keys.L) && screentype == Screen.Game)
             {
                 screentype = Screen.Losing;
             }
@@ -326,11 +460,13 @@ namespace AdventureGame2
             // TODO: Add your drawing code here
 
             /*
-             * Help Screen = Black
-             * Losing Screen = Purple
+            * Losing Screen = Purple
             */
-            Vector2 textLocation1 = new Vector2(200, 50);
-            Vector2 textLocation2 = new Vector2(550, 50);
+
+            Vector2 textLocation1 = new Vector2(225, 50);
+            Vector2 textLocation2 = new Vector2(585, 50);
+            Vector2 textLocation3 = new Vector2(20, 0);
+            Vector2 textLocation4 = new Vector2(60, 325);
 
             spriteBatch.Begin();
             if (screentype == Screen.Start)
@@ -345,7 +481,8 @@ namespace AdventureGame2
             }
             else if (screentype == Screen.Help)
             {
-                GraphicsDevice.Clear(color[0]);
+                spriteBatch.Draw(HelpScreenText, HelpScreenRect, Color.White);
+                spriteBatch.Draw(playAgainArrowText, playAgainArrowRect, Color.White);
             }
             else if (screentype == Screen.AvatarSelect)
             {
@@ -364,20 +501,43 @@ namespace AdventureGame2
                 spriteBatch.DrawString(EndingScreenCredits, endingCredits[3], new Vector2(330, 260), Color.Red);
                 spriteBatch.DrawString(EndingScreenCredits, endingCredits[4], new Vector2(327, 280), Color.Red);
                 spriteBatch.DrawString(EndingScreenCredits, endingCredits[5], new Vector2(340, 300), Color.Red);
+
+                spriteBatch.Draw(playAgainArrow2Text, playAgainArrow2Rect, Color.White);
+                spriteBatch.DrawString(playAgainFont, "Play \nAgain", textLocation4, Color.Green);
             }
             else if (screentype == Screen.Game)
             {
-                spriteBatch.Draw(roomBackgroundText, roomBackgroundRect, Color.White);
-                spriteBatch.DrawString(ActionOptionsFont, "Run out into the storm!", new Vector2(125, 100), Color.White);
-                spriteBatch.DrawString(ActionOptionsFont, "Hide in your room!", new Vector2(525, 100), Color.White);
+                /*
+                 * First Screen
+                 * 
+                 * 
+                 * */
+                spriteBatch.Draw(GameScreenText, roomBackgroundRect, Color.White);
+                spriteBatch.Draw(EffectBoxText, EffectBoxRect, Color.White);
+                spriteBatch.DrawString(ResponseFont, prompt, textLocation3, Color.White);
+
+                spriteBatch.Draw(ChoiceBoxText, CBRect1, Color.White);
+                spriteBatch.DrawString(ActionOptionsFont, Choice1, new Vector2(20, 405), Color.White);
+
+                spriteBatch.Draw(ChoiceBoxText, CBRect2, Color.White);
+                spriteBatch.DrawString(ActionOptionsFont, Choice2, new Vector2(600, 405), Color.White);
+
+                if (Choice3 != "")
+                {
+                    spriteBatch.Draw(ChoiceBoxText, CBRect3, Color.White);
+                    spriteBatch.DrawString(ActionOptionsFont, Choice3, new Vector2(310, 405), Color.White);
+                }
+
             }
             else if (screentype == Screen.Losing)
             {
-                GraphicsDevice.Clear(color[1]);
+                spriteBatch.Draw(losingScreenText, losingScreenRect, Color.White);
+                spriteBatch.Draw(playAgainArrowText, playAgainArrowRect, Color.White);
             }
 
             spriteBatch.End();
             base.Draw(gameTime);
         }
+
     }
 }
