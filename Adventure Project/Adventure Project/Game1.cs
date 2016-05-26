@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using Microsoft.Xna.Framework;
@@ -33,7 +33,6 @@ namespace Adventure_Project
         GraphicsDeviceManager graphics;
         SpriteBatch spriteBatch;
         Screen screentype = Screen.Start;
-        Screen oldscreentype;
         MouseState oldMouse = Mouse.GetState();
         Color[] color = new Color[2] { Color.Black, Color.Purple };
         string[] endingCredits = new string[6] { "Congratulations you escaped!", "Created by:", "Dani Alvarez",
@@ -136,6 +135,7 @@ namespace Adventure_Project
 
         Texture2D GameScreenText;
 
+        String choicePath;
 
         /*
          * This is for the levels
@@ -144,6 +144,14 @@ namespace Adventure_Project
         Rectangle CBRect1; //CB = Choice Box
         Rectangle CBRect2; //CB = Choice Box
         Rectangle CBRect3; //CB = Choice Box
+        Rectangle CBRect4; //CB = Choice Box
+        Rectangle CBRect5; //CB = Choice Box
+        Rectangle CBRect6; //CB = Choice Box
+        Rectangle CBRect7; //CB = Choice Box
+        Rectangle CBRect8; //CB = Choice Box
+        Rectangle CBRect9; //CB = Choice Box
+        Rectangle CBRect10; //CB = Choice Box
+        Rectangle CBRect11; //CB = Choice Box
 
         Texture2D ChoiceBoxText;
         Rectangle EffectBoxRect;
@@ -194,27 +202,37 @@ namespace Adventure_Project
             startButtonRect = new Rectangle(380, 390, 50, 50);
             startButtonRect2 = new Rectangle(675, 400, 50, 50);
             playAgainArrowRect = new Rectangle(650, 400, 100, 50);
-            questionMarkRect = new Rectangle(700, 25, 50, 50);
+            questionMarkRect = new Rectangle(750, 90, 50, 50);
             playAgainArrow2Rect = new Rectangle(50, 400, 100, 50);
 
             /*
              * This is for the levels
              */
 
-            EffectBoxRect = new Rectangle(250, 50, 300, 100);
+            EffectBoxRect = new Rectangle(10, 0, 780, 75);
 
-            x = 100;
-            y = 300;
+            x = 10;
+            y = 400;
             w = 200;
             h = 70;
 
             CBRect1 = new Rectangle(x, y, w, h);
-            CBRect2 = new Rectangle(x + 400, y, w, h);
+            CBRect2 = new Rectangle(x + 580, y, w, h);
+            CBRect3 = new Rectangle(x, y, w, h);
+            CBRect4 = new Rectangle(x + 580, y, w, h);
+            CBRect5 = new Rectangle(x, y, w, h);
+            CBRect6 = new Rectangle(x + 300, y, w, h);
+            CBRect7 = new Rectangle(x + 580, y, w, h);
+            CBRect8 = new Rectangle(x, y, w, h);
+            CBRect9 = new Rectangle(x + 580, y, w, h);
+            CBRect10 = new Rectangle(x, y, w, h);
+            CBRect11 = new Rectangle(x + 580, y, w, h);
 
+            choicePath = "";
 
-            prompt = "You are getting ready to \nleave when the asylum \nbreaks out into chaos!";
+            prompt = "You are getting ready to leave when the asylum breaks out into chaos!";
             Choice1 = "Run out into\n the storm!";
-            Choice2 = "Hide in your room!";
+            Choice2 = "Hide in your \nroom!";
             Choice3 = "";
 
             base.Initialize();
@@ -262,7 +280,6 @@ namespace Adventure_Project
             AvatarSelectText = Content.Load<Texture2D>("Avatar Select Screen");
             losingScreenText = Content.Load<Texture2D>("Losing Screen");
             HelpScreenText = Content.Load<Texture2D>("Help Screen");
-
 
             /*
              * 
@@ -328,15 +345,11 @@ namespace Adventure_Project
             if (mouse.LeftButton == ButtonState.Pressed
                 && oldMouse.LeftButton == ButtonState.Released)
             {
-                if (screentype == Screen.Start &&
-                   (mouse.X > startButtonRect.X && mouse.X < (startButtonRect.X + startButtonRect.Width)) &&
-                   (mouse.Y > startButtonRect.Y && mouse.Y < (startButtonRect.Y + startButtonRect.Height)))
+                if (screentype == Screen.Start && startButtonRect.Contains(mouse.X, mouse.Y))
                 {
                     screentype = Screen.Describe;
                 }
-                else if (screentype == Screen.Describe &&
-                   (mouse.X > startButtonRect2.X && mouse.X < (startButtonRect2.X + startButtonRect2.Width)) &&
-                   (mouse.Y > startButtonRect2.Y && mouse.Y < (startButtonRect2.Y + startButtonRect2.Height)))
+                else if (screentype == Screen.Describe && startButtonRect2.Contains(mouse.X, mouse.Y))
                 {
                     screentype = Screen.AvatarSelect;
                 }
@@ -345,21 +358,17 @@ namespace Adventure_Project
                     if (mouse.LeftButton == ButtonState.Pressed
                         && oldMouse.LeftButton == ButtonState.Released)
                     {
-                        if ((mouse.X > girlBeforeRect.X && mouse.X < girlBeforeRect.X + girlBeforeRect.Width) &&
-                        (mouse.Y > girlBeforeRect.Y && mouse.Y < girlBeforeRect.Y + girlBeforeRect.Height) || (mouse.X > boyBeforeRect.X && mouse.X < boyBeforeRect.X + boyBeforeRect.Width) &&
-                        (mouse.Y > boyBeforeRect.Y && mouse.Y < boyBeforeRect.Y + boyBeforeRect.Height))
+                        if (girlBeforeRect.Contains(mouse.X, mouse.Y) || boyBeforeRect.Contains(mouse.X, mouse.Y))
                         {
                             screentype = Screen.Game;
                         }
                         // Decides which Gameover Screen you get
-                        if ((mouse.X > girlBeforeRect.X && mouse.X < girlBeforeRect.X + girlBeforeRect.Width) &&
-                       (mouse.Y > girlBeforeRect.Y && mouse.Y < girlBeforeRect.Y + girlBeforeRect.Height))
+                        if (girlBeforeRect.Contains(mouse.X, mouse.Y))
                         {
                             VictoryScreenRect = girlWinGameoverBackgroundRect;
                             VictoryScreenText = girlWinGameoverBackgroundText;
                         }
-                        if ((mouse.X > boyBeforeRect.X && mouse.X < boyBeforeRect.X + boyBeforeRect.Width) &&
-                       (mouse.Y > boyBeforeRect.Y && mouse.Y < boyBeforeRect.Y + boyBeforeRect.Height))
+                        if (boyBeforeRect.Contains(mouse.X, mouse.Y))
                         {
                             VictoryScreenRect = boyWinGameoverBackgroundRect;
                             VictoryScreenText = boyWinGameoverBackgroundText;
@@ -387,52 +396,116 @@ namespace Adventure_Project
                  * */
                 if (screentype == Screen.Game)
                 {
-                     if((mouse.X > CBRect1.X && mouse.X < CBRect1.X + CBRect1.Width) &&
-                   (mouse.Y > CBRect1.Y && mouse.Y < CBRect1.Y + CBRect1.Height))
+                    if (choicePath.Length == 0)
                     {
-                        GameScreenText = Content.Load<Texture2D>("MHH");
-                        prompt = "You collide into a rampaging\npatient. They glare at \nyou with wild eyes";
-                        Choice1 = "\'Excuse Me.\'";
-                        Choice2 = "\'Fight Me!\'";
-
+                        if (CBRect1.Contains(mouse.X, mouse.Y))//run into the storm
+                        {
+                            GameScreenText = Content.Load<Texture2D>("MHH");
+                            prompt = "You collide into a rampaging patient. They glare at you with wild eyes";
+                            Choice1 = "\'Excuse Me.\'";
+                            Choice2 = "\'Fight Me!\'";
+                            choicePath = choicePath + 1;
+                        }
+                        if (CBRect2.Contains(mouse.X, mouse.Y))//hide in your room
+                        {
+                            prompt = "You remain in your room when the door slams open and a bunch of nurses with\ntranquilizer guns come in.";
+                            Choice1 = "Hide under your \nbed";
+                            Choice2 = "Scream and\nKick them out";
+                            Choice3 = " \'What's Up?\' ";
+                            choicePath = choicePath + 2;
+                        }
                     }
-                    if ((mouse.X > CBRect2.X && mouse.X < CBRect2.X + CBRect1.Width) &&
-                        (mouse.Y > CBRect2.Y && mouse.Y < CBRect2.Y + CBRect1.Height))
+                    else if (choicePath.Length == 1)
                     {
-                        prompt = "You remain in your room when \nthe door slams open and a \nbunch of nurses with tranquilizer \nguns come in.";
-                        Choice1 = "Hide under your bed";
-                        Choice2 = "\'What's Up?\'";
-                        Choice3 = "Scream and Kick them out";
-                        CBRect2.X = x + 250;
-                        CBRect3 = new Rectangle(x + 500, y, w, h);
+                        if (CBRect3.Contains(mouse.X, mouse.Y) && choicePath == "1") //Excuse me
+                        {
+                            prompt = "Its alright sugar bun! They smile and kiss you unexpectedly. You leave, \nwhere are you going?";
+                            Choice1 = "Medical Ward";
+                            Choice2 = "Administration \nOffice";
+                            Choice3 = "";
+                            choicePath = choicePath + 1;
+                        }
+                        if (CBRect4.Contains(mouse.X, mouse.Y) && choicePath == "1") //Fight me
+                        {
+                            prompt = "They bite your arm and scratch your face. Bleeding, you manage to throw \nthem off you. Your move to attack!";
+                            Choice1 = "K.O. with One \nPunch";
+                            Choice2 = "Kick in the jaw";
+                            Choice3 = "";
+                            choicePath = choicePath + 2;
+                        }
+                    }
+                    else if (choicePath.Length == 2)
+                    {
+                        if (CBRect8.Contains(mouse.X, mouse.Y)) //Medical Ward
+                        {
+                            prompt = "You make your way to the medical ward safely, grab your normal clothes, and \nexit. On your way out, you run into one of the nurses. What do you do?";
+                            Choice1 = "Force your way out";
+                            Choice2 = "Calmly explain what you are doing";
+                            Choice3 = "";
+
+                        }
+
+                        if (CBRect9.Contains(mouse.X, mouse.Y)) //Fight me
+                        {
+                            prompt = "You acquire your release forms and head for the door. As you leave a small \nchild asks you to take them with you.";
+                            Choice1 = "You know you cant so you say a quick sorry and run to the medical ward.";
+                            Choice2 = "";
+                            Choice3 = "";
+
+                        }
+                        if (CBRect10.Contains(mouse.X, mouse.Y)) //Fight me
+                        {
+                            prompt = "They fall and you make a run to the...";
+                            Choice1 = "Administrations \nOffice";
+                            Choice2 = "Hospital Ward";
+                            Choice3 = "";
+
+                        }
+                        if (CBRect11.Contains(mouse.X, mouse.Y)) //Fight me
+                        {
+                            prompt = "They fall and you make a run to the...";
+                            Choice1 = "Administrations \nOffice";
+                            Choice2 = "Hospital Ward";
+                            Choice3 = "";
+                        }
+                        if (CBRect10.Contains(mouse.X, mouse.Y))
+                        {
+                            GameScreenText = adminOfficeBackgroundText;
+                            prompt = "You acquire your release forms and head for the door. As you leave a small \nchild asks you to take them with you.";
+                            Choice1 = "You know you can’t so you say a quick “sorry” and run to the medical ward.";
+                            Choice2 = "You take them along";
+                        }
+                        if (CBRect11.Contains(mouse.X, mouse.Y)) 
+                        {
+                            prompt = "You make your way to the medical ward safely, grab your normal clothes, and \nexit. On your way out, you run into one of the nurses. What do you do?";
+                            Choice1 = "Surrender";
+                            Choice2 = "Force your way out";
+                            Choice3 = "Calmly explain what you are doing";
+                        }
                     }
 
-                    if ((mouse.X > questionMarkRect.X && mouse.X < questionMarkRect.X + questionMarkRect.Width) &&
-                   (mouse.Y > questionMarkRect.Y && mouse.Y < questionMarkRect.Y + questionMarkRect.Height))
+                    if (questionMarkRect.Contains(mouse.X, mouse.Y))
                     {
                         screentype = Screen.Help;
                     }
                 }
                 else if (screentype == Screen.Losing)
                 {
-                    if ((mouse.X > playAgainArrowRect.X && mouse.X < playAgainArrowRect.X + playAgainArrowRect.Width) &&
-                       (mouse.Y > playAgainArrowRect.Y && mouse.Y < playAgainArrowRect.Y + playAgainArrowRect.Height))
+                    if (playAgainArrowRect.Contains(mouse.X, mouse.Y))
                     {
                         screentype = Screen.Start;
                     }
                 }
                 else if (screentype == Screen.Help)
                 {
-                    if ((mouse.X > playAgainArrowRect.X && mouse.X < playAgainArrowRect.X + playAgainArrowRect.Width) &&
-                       (mouse.Y > playAgainArrowRect.Y && mouse.Y < playAgainArrowRect.Y + playAgainArrowRect.Height))
+                    if (playAgainArrowRect.Contains(mouse.X, mouse.Y))
                     {
                         screentype = Screen.Game;
                     }
                 }
                 else if (screentype == Screen.Gameover)
                 {
-                    if ((mouse.X > playAgainArrowRect.X && mouse.X < playAgainArrowRect.X + playAgainArrowRect.Width) &&
-                       (mouse.Y > playAgainArrowRect.Y && mouse.Y < playAgainArrowRect.Y + playAgainArrowRect.Height))
+                    if (playAgainArrow2Rect.Contains(mouse.X, mouse.Y))
                     {
                         screentype = Screen.Start;
                     }
@@ -465,9 +538,9 @@ namespace Adventure_Project
              * Help Screen = Black
              * Losing Screen = Purple
             */
-            Vector2 textLocation1 = new Vector2(200, 50);
-            Vector2 textLocation2 = new Vector2(550, 50);
-            Vector2 textLocation3 = new Vector2(260, 60);
+            Vector2 textLocation1 = new Vector2(225, 50);
+            Vector2 textLocation2 = new Vector2(585, 50);
+            Vector2 textLocation3 = new Vector2(20, 0);
             Vector2 textLocation4 = new Vector2(60, 325);
 
             spriteBatch.Begin();
@@ -514,16 +587,16 @@ namespace Adventure_Project
                 spriteBatch.DrawString(ResponseFont, prompt, textLocation3, Color.White);
 
                 spriteBatch.Draw(ChoiceBoxText, CBRect1, Color.White);
-                spriteBatch.DrawString(ActionOptionsFont, Choice1, new Vector2(130, 310), Color.White);
+                spriteBatch.DrawString(ActionOptionsFont, Choice1, new Vector2(20, 405), Color.White);
 
                 spriteBatch.Draw(ChoiceBoxText, CBRect2, Color.White);
-                spriteBatch.DrawString(ActionOptionsFont, Choice2, new Vector2(505, 330), Color.White);
+                spriteBatch.DrawString(ActionOptionsFont, Choice2, new Vector2(600, 405), Color.White);
 
-                if (Choice3 != "")
-                {
-                    spriteBatch.Draw(ChoiceBoxText, CBRect3, Color.White);
-                    spriteBatch.DrawString(ActionOptionsFont, Choice3, new Vector2(605, 330), Color.White);
-                }
+                //if (Choice3 != "")
+                //{
+                //   spriteBatch.Draw(ChoiceBoxText, CBRect3, Color.White);
+                //    spriteBatch.DrawString(ActionOptionsFont, Choice3, new Vector2(605, 330), Color.White);
+                //}
 
                 spriteBatch.Draw(questionMarkText, questionMarkRect, Color.White);
             }

@@ -242,7 +242,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\160291\Desktop\Adventure Project\Adventure Project\Adventure Project\bin\x86\Debug\Content\Help Screen.xnb</Output>
-      <Time>2016-05-20T15:16:39.8421748-05:00</Time>
+      <Time>2016-05-24T15:52:50.4571137-05:00</Time>
     </Item>
     <Item>
       <Source>patient1.png</Source>
@@ -278,7 +278,7 @@
       <Processor>FontDescriptionProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\160291\Desktop\Adventure Project\Adventure Project\Adventure Project\bin\x86\Debug\Content\SpriteFont5.xnb</Output>
-      <Time>2016-05-20T16:17:10.7438034-05:00</Time>
+      <Time>2016-05-26T15:48:14.4622195-05:00</Time>
     </Item>
     <BuildSuccessful>true</BuildSuccessful>
     <Settings>
