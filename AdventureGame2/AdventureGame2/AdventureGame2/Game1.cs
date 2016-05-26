@@ -401,7 +401,11 @@ namespace AdventureGame
                         Choice2 = "\'What's Up?\'";
                         Choice3 = "Scream and Kick \nthem out";
                     }
-
+                    if (CBRect3.Contains(mouse.X, mouse.Y))// if stay in room and screeam and kick them out option is clicked
+                    {
+                        prompt = "Your aggression makes them afraid and they call for backup. Now you are heavily \noutnumbered.";
+                    }
+                    
                     if (questionMarkRect.Contains(mouse.X, mouse.Y))
                     {
                          screentype = Screen.Help;
