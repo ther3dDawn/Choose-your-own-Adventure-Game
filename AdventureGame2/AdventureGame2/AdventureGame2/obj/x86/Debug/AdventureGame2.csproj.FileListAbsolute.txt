@@ -25,3 +25,13 @@ C:\Users\128612\Desktop\AdventureGame2\AdventureGame2\AdventureGame2\obj\x86\Deb
 C:\Users\128612\Desktop\AdventureGame2\AdventureGame2\AdventureGame2\obj\x86\Debug\Microsoft.Xna.Framework.RuntimeProfile.txt
 C:\Users\128612\Desktop\AdventureGame2\AdventureGame2\AdventureGame2\obj\x86\Debug\AdventureGame2.exe
 C:\Users\128612\Desktop\AdventureGame2\AdventureGame2\AdventureGame2\obj\x86\Debug\AdventureGame2.pdb
+C:\Users\128612\Desktop\AdventureGame2\AdventureGame2\AdventureGame2\bin\x86\Debug\Content\Help Screen.xnb
+C:\Users\128612\Desktop\AdventureGame2\AdventureGame2\AdventureGame2\bin\x86\Debug\Content\EffectBox.xnb
+C:\Users\128612\Desktop\AdventureGame2\AdventureGame2\AdventureGame2\bin\x86\Debug\Content\ChoiceBox.xnb
+C:\Users\128612\Desktop\AdventureGame2\AdventureGame2\AdventureGame2\bin\x86\Debug\Content\SpriteFont4.xnb
+C:\Users\128612\Desktop\AdventureGame2\AdventureGame2\AdventureGame2\bin\x86\Debug\Content\SpriteFont5.xnb
+C:\Users\128612\Desktop\AdventureGame2\AdventureGame2\AdventureGame2\bin\x86\Debug\Content\patient1.xnb
+C:\Users\128612\Desktop\AdventureGame2\AdventureGame2\AdventureGame2\bin\x86\Debug\Content\Losing Screen.xnb
+C:\Users\128612\Desktop\AdventureGame2\AdventureGame2\AdventureGame2\bin\x86\Debug\Content\green arrow.xnb
+C:\Users\128612\Desktop\AdventureGame2\AdventureGame2\AdventureGame2\bin\x86\Debug\Content\green arrow2.xnb
+C:\Users\128612\Desktop\AdventureGame2\AdventureGame2\AdventureGame2\bin\x86\Debug\Content\question mark.xnb

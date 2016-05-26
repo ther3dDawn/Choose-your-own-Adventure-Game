@@ -190,6 +190,96 @@
       <Output>C:\Users\128612\Desktop\AdventureGame2\AdventureGame2\AdventureGame2\bin\x86\Debug\Content\SpriteFont3.xnb</Output>
       <Time>2016-05-16T15:20:18.0207534-05:00</Time>
     </Item>
+    <Item>
+      <Source>Help Screen.png</Source>
+      <Name>Help Screen</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\128612\Desktop\AdventureGame2\AdventureGame2\AdventureGame2\bin\x86\Debug\Content\Help Screen.xnb</Output>
+      <Time>2016-05-16T16:07:17.1701021-05:00</Time>
+    </Item>
+    <Item>
+      <Source>EffectBox.png</Source>
+      <Name>EffectBox</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\128612\Desktop\AdventureGame2\AdventureGame2\AdventureGame2\bin\x86\Debug\Content\EffectBox.xnb</Output>
+      <Time>2016-05-16T16:21:07.3736191-05:00</Time>
+    </Item>
+    <Item>
+      <Source>ChoiceBox.png</Source>
+      <Name>ChoiceBox</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\128612\Desktop\AdventureGame2\AdventureGame2\AdventureGame2\bin\x86\Debug\Content\ChoiceBox.xnb</Output>
+      <Time>2016-05-16T16:21:14.4595758-05:00</Time>
+    </Item>
+    <Item>
+      <Source>SpriteFont4.spritefont</Source>
+      <Name>SpriteFont4</Name>
+      <Importer>FontDescriptionImporter</Importer>
+      <Processor>FontDescriptionProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\128612\Desktop\AdventureGame2\AdventureGame2\AdventureGame2\bin\x86\Debug\Content\SpriteFont4.xnb</Output>
+      <Time>2016-05-18T16:08:10.6106188-05:00</Time>
+    </Item>
+    <Item>
+      <Source>SpriteFont5.spritefont</Source>
+      <Name>SpriteFont5</Name>
+      <Importer>FontDescriptionImporter</Importer>
+      <Processor>FontDescriptionProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\128612\Desktop\AdventureGame2\AdventureGame2\AdventureGame2\bin\x86\Debug\Content\SpriteFont5.xnb</Output>
+      <Time>2016-05-26T15:12:14.1136998-05:00</Time>
+    </Item>
+    <Item>
+      <Source>patient1.png</Source>
+      <Name>patient1</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\128612\Desktop\AdventureGame2\AdventureGame2\AdventureGame2\bin\x86\Debug\Content\patient1.xnb</Output>
+      <Time>2016-05-26T15:15:30.1782339-05:00</Time>
+    </Item>
+    <Item>
+      <Source>Losing Screen.png</Source>
+      <Name>Losing Screen</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\128612\Desktop\AdventureGame2\AdventureGame2\AdventureGame2\bin\x86\Debug\Content\Losing Screen.xnb</Output>
+      <Time>2016-05-26T15:17:02.1126171-05:00</Time>
+    </Item>
+    <Item>
+      <Source>green arrow.png</Source>
+      <Name>green arrow</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\128612\Desktop\AdventureGame2\AdventureGame2\AdventureGame2\bin\x86\Debug\Content\green arrow.xnb</Output>
+      <Time>2016-05-26T15:18:03.6889299-05:00</Time>
+    </Item>
+    <Item>
+      <Source>green arrow2.png</Source>
+      <Name>green arrow2</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\128612\Desktop\AdventureGame2\AdventureGame2\AdventureGame2\bin\x86\Debug\Content\green arrow2.xnb</Output>
+      <Time>2016-05-26T15:18:03.6929307-05:00</Time>
+    </Item>
+    <Item>
+      <Source>question mark.png</Source>
+      <Name>question mark</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\128612\Desktop\AdventureGame2\AdventureGame2\AdventureGame2\bin\x86\Debug\Content\question mark.xnb</Output>
+      <Time>2016-05-26T15:18:33.7979505-05:00</Time>
+    </Item>
     <BuildSuccessful>true</BuildSuccessful>
     <Settings>
       <TargetPlatform>Windows</TargetPlatform>

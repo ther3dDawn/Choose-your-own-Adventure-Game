@@ -19,3 +19,13 @@ Content\nurse1.xnb
 Content\SpriteFont1.xnb
 Content\SpriteFont2.xnb
 Content\SpriteFont3.xnb
+Content\Help Screen.xnb
+Content\EffectBox.xnb
+Content\ChoiceBox.xnb
+Content\SpriteFont4.xnb
+Content\SpriteFont5.xnb
+Content\patient1.xnb
+Content\Losing Screen.xnb
+Content\green arrow.xnb
+Content\green arrow2.xnb
+Content\question mark.xnb
